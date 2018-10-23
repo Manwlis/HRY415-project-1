@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/arxitektonikh1/Reg32BitR.xst" -ofn "C:/arxitektonikh1/Reg32BitR.syr" 

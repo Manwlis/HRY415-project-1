@@ -1,0 +1,23 @@
+xst -intstyle ise -ifn "C:/arxitektonikh1/CDBunit.xst" -ofn "C:/arxitektonikh1/CDBunit.syr" 
+xst -intstyle ise -ifn "C:/arxitektonikh1/CDBunit.xst" -ofn "C:/arxitektonikh1/CDBunit.syr" 
+xst -intstyle ise -ifn "C:/arxitektonikh1/CDBunit.xst" -ofn "C:/arxitektonikh1/CDBunit.syr" 
+xst -intstyle ise -ifn "C:/arxitektonikh1/CDBunit.xst" -ofn "C:/arxitektonikh1/CDBunit.syr" 
+xst -intstyle ise -ifn "C:/arxitektonikh1/CDBunit.xst" -ofn "C:/arxitektonikh1/CDBunit.syr" 
+xst -intstyle ise -ifn "C:/arxitektonikh1/CDBunit.xst" -ofn "C:/arxitektonikh1/CDBunit.syr" 
+xst -intstyle ise -ifn "C:/arxitektonikh1/CDBunit.xst" -ofn "C:/arxitektonikh1/CDBunit.syr" 
+xst -intstyle ise -ifn "C:/arxitektonikh1/CDBunit.xst" -ofn "C:/arxitektonikh1/CDBunit.syr" 
+xst -intstyle ise -ifn "C:/arxitektonikh1/CDBunit.xst" -ofn "C:/arxitektonikh1/CDBunit.syr" 
+xst -intstyle ise -ifn "C:/arxitektonikh1/CDBunit.xst" -ofn "C:/arxitektonikh1/CDBunit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 CDBunit.ngc CDBunit.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o CDBunit_map.ncd CDBunit.ngd CDBunit.pcf 
+xst -intstyle ise -ifn "C:/arxitektonikh1/CDBunit.xst" -ofn "C:/arxitektonikh1/CDBunit.syr" 
+xst -intstyle ise -ifn "C:/arxitektonikh1/CDBunit.xst" -ofn "C:/arxitektonikh1/CDBunit.syr" 
+xst -intstyle ise -ifn "C:/arxitektonikh1/CDBunit.xst" -ofn "C:/arxitektonikh1/CDBunit.syr" 
+xst -intstyle ise -ifn "C:/arxitektonikh1/CDBunit.xst" -ofn "C:/arxitektonikh1/CDBunit.syr" 
+xst -intstyle ise -ifn "C:/arxitektonikh1/CDBunit.xst" -ofn "C:/arxitektonikh1/CDBunit.syr" 
+xst -intstyle ise -ifn "C:/arxitektonikh1/CDBunit.xst" -ofn "C:/arxitektonikh1/CDBunit.syr" 
+xst -intstyle ise -ifn "C:/arxitektonikh1/CDBunit.xst" -ofn "C:/arxitektonikh1/CDBunit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s1600e-fg320-5 CDBunit.ngc CDBunit.ngd  
+map -intstyle ise -p xc3s1600e-fg320-5 -cm area -ir off -pr off -c 100 -o CDBunit_map.ncd CDBunit.ngd CDBunit.pcf 
+par -w -intstyle ise -ol high -t 1 CDBunit_map.ncd CDBunit.ncd CDBunit.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml CDBunit.twx CDBunit.ncd -o CDBunit.twr CDBunit.pcf 

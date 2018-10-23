@@ -1,0 +1,3 @@
+vhdl work "mux.vhd"
+vhdl work "mux5Bit.vhd"
+vhdl work "mux4to1_5bit.vhd"

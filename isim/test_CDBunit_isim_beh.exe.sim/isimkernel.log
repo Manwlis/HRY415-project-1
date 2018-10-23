@@ -1,0 +1,29 @@
+Command line:
+   test_CDBunit_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  51431
+
+Tue Oct 23 21:20:45 2018
+
+
+ Elaboration Time: 0.0312 sec
+
+ Current Memory Usage: 505.344 Meg
+
+ Total Signals          : 602
+ Total Nets             : 297
+ Total Signal Drivers   : 141
+ Total Blocks           : 139
+ Total Primitive Blocks : 123
+ Total Processes        : 133
+ Total Traceable Variables  : 9
+ Total Scalar Nets and Variables : 658
+Total Line Count : 212
+
+ Total Simulation Time: 0.0624 sec
+
+ Current Memory Usage: 505.344 Meg
+
+Tue Oct 23 21:23:20 2018
+

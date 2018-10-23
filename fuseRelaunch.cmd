@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/arxitektonikh1/test_CDBunit_isim_beh.exe" -prj "C:/arxitektonikh1/test_CDBunit_beh.prj" "work.test_CDBunit" 

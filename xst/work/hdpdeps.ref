@@ -1,0 +1,73 @@
+V3 54
+FL C:/arxitektonikh1/CDBunit.vhd 2018/10/23.19:44:49 O.87xd
+EN work/CDBunit 1540320454 FL C:/arxitektonikh1/CDBunit.vhd PB ieee/std_logic_1164 1325952872
+AR work/CDBunit/Behavioral 1540320455 \
+      FL C:/arxitektonikh1/CDBunit.vhd EN work/CDBunit 1540320454 CP mux4to1_32Bit \
+      CP mux4to1_5bit CP CDB_control CP Reg1BitR CP Reg4BitR
+FL C:/arxitektonikh1/CDB_control.vhd 2018/10/23.19:45:22 O.87xd
+EN work/CDB_control 1540320450 FL C:/arxitektonikh1/CDB_control.vhd \
+      PB ieee/std_logic_1164 1325952872
+AR work/CDB_control/Behavioral 1540320451 \
+      FL C:/arxitektonikh1/CDB_control.vhd EN work/CDB_control 1540320450
+FL C:/arxitektonikh1/flipflop.vhd 2018/10/23.17:08:47 O.87xd
+EN work/flipflop 1540320814 FL C:/arxitektonikh1/flipflop.vhd \
+      PB ieee/std_logic_1164 1325952872
+AR work/flipflop/Behavioral 1540320815 \
+      FL C:/arxitektonikh1/flipflop.vhd EN work/flipflop 1540320814
+FL C:/arxitektonikh1/FU_logical.vhd 2018/10/23.21:53:24 O.87xd
+EN work/FU_logical 1540320826 FL C:/arxitektonikh1/FU_logical.vhd \
+      PB ieee/std_logic_1164 1325952872
+AR work/FU_logical/Behavioral 1540320827 \
+      FL C:/arxitektonikh1/FU_logical.vhd EN work/FU_logical 1540320826 \
+      CP Reg32BitR CP logical_unit CP FU_logical_control
+FL C:/arxitektonikh1/FU_logical_control.vhd 2018/10/23.21:46:58 O.87xd
+EN work/FU_logical_control 1540320824 FL C:/arxitektonikh1/FU_logical_control.vhd \
+      PB ieee/std_logic_1164 1325952872
+AR work/FU_logical_control/Behavioral 1540320825 \
+      FL C:/arxitektonikh1/FU_logical_control.vhd EN work/FU_logical_control 1540320824
+FL C:/arxitektonikh1/logical_unit.vhd 2018/10/23.20:34:25 O.87xd
+EN work/logical_unit 1540320822 FL C:/arxitektonikh1/logical_unit.vhd \
+      PB ieee/std_logic_1164 1325952872
+AR work/logical_unit/Behavioral 1540320823 \
+      FL C:/arxitektonikh1/logical_unit.vhd EN work/logical_unit 1540320822
+FL C:/arxitektonikh1/mux.vhd 2018/10/23.17:08:48 O.87xd
+EN work/mux 1540320812 FL C:/arxitektonikh1/mux.vhd PB ieee/std_logic_1164 1325952872
+AR work/mux/Behavioral 1540320813 \
+      FL C:/arxitektonikh1/mux.vhd EN work/mux 1540320812
+FL C:/arxitektonikh1/mux32Bit.vhd 2018/10/23.17:08:48 O.87xd
+EN work/mux32Bit 1540320444 FL C:/arxitektonikh1/mux32Bit.vhd \
+      PB ieee/std_logic_1164 1325952872
+AR work/mux32Bit/Behavioral 1540320445 \
+      FL C:/arxitektonikh1/mux32Bit.vhd EN work/mux32Bit 1540320444 CP mux
+FL C:/arxitektonikh1/mux4to1_32Bit.vhd 2018/10/23.17:08:48 O.87xd
+EN work/mux4to1_32Bit 1540320446 FL C:/arxitektonikh1/mux4to1_32Bit.vhd \
+      PB ieee/std_logic_1164 1325952872
+AR work/mux4to1_32Bit/Behavioral 1540320447 \
+      FL C:/arxitektonikh1/mux4to1_32Bit.vhd EN work/mux4to1_32Bit 1540320446 \
+      CP mux32Bit
+FL C:/arxitektonikh1/mux4to1_5bit.vhd 2018/10/23.17:49:31 O.87xd
+EN work/mux4to1_5bit 1540320448 FL C:/arxitektonikh1/mux4to1_5bit.vhd \
+      PB ieee/std_logic_1164 1325952872
+AR work/mux4to1_5bit/Behavioral 1540320449 \
+      FL C:/arxitektonikh1/mux4to1_5bit.vhd EN work/mux4to1_5bit 1540320448 \
+      CP mux5Bit
+FL C:/arxitektonikh1/mux5Bit.vhd 2018/10/23.17:08:48 O.87xd
+EN work/mux5Bit 1540320442 FL C:/arxitektonikh1/mux5Bit.vhd PB ieee/std_logic_1164 1325952872
+AR work/mux5Bit/Behavioral 1540320443 \
+      FL C:/arxitektonikh1/mux5Bit.vhd EN work/mux5Bit 1540320442 CP mux
+FL C:/arxitektonikh1/Reg1BitR.vhd 2018/10/23.18:37:19 O.87xd
+EN work/Reg1BitR 1540320816 FL C:/arxitektonikh1/Reg1BitR.vhd \
+      PB ieee/std_logic_1164 1325952872
+AR work/Reg1BitR/Behavioral 1540320817 \
+      FL C:/arxitektonikh1/Reg1BitR.vhd EN work/Reg1BitR 1540320816 CP mux \
+      CP flipflop
+FL C:/arxitektonikh1/Reg32BitR.vhd 2018/10/23.18:37:28 O.87xd
+EN work/Reg32BitR 1540320820 FL C:/arxitektonikh1/Reg32BitR.vhd \
+      PB ieee/std_logic_1164 1325952872
+AR work/Reg32BitR/Structural 1540320821 \
+      FL C:/arxitektonikh1/Reg32BitR.vhd EN work/Reg32BitR 1540320820 CP Reg4BitR
+FL C:/arxitektonikh1/Reg4BitR.vhd 2018/10/23.18:37:40 O.87xd
+EN work/Reg4BitR 1540320818 FL C:/arxitektonikh1/Reg4BitR.vhd \
+      PB ieee/std_logic_1164 1325952872
+AR work/Reg4BitR/Behavioral 1540320819 \
+      FL C:/arxitektonikh1/Reg4BitR.vhd EN work/Reg4BitR 1540320818 CP Reg1BitR
