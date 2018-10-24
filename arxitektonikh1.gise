@@ -58,14 +58,37 @@
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="CDBunit_usage.xml"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="CDBunit_vhdl.prj"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="CDBunit_xst.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="FU_arithmetic.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="FU_arithmetic.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="FU_arithmetic.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="FU_arithmetic.ncd" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="FU_arithmetic.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="FU_arithmetic.ngd"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="FU_arithmetic.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="FU_arithmetic.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="FU_arithmetic.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="FU_arithmetic.pcf" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="FU_arithmetic.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="FU_arithmetic.ptwx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="FU_arithmetic.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="FU_arithmetic.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="FU_arithmetic.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="FU_arithmetic.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="FU_arithmetic.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="FU_arithmetic.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="FU_arithmetic.xst"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="FU_arithmetic_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="FU_arithmetic_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="FU_arithmetic_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="FU_arithmetic_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="FU_arithmetic_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="FU_arithmetic_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="FU_arithmetic_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="FU_arithmetic_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="FU_arithmetic_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="FU_arithmetic_par.xrpt"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="FU_arithmetic_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="FU_arithmetic_usage.xml"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="FU_arithmetic_vhdl.prj"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="FU_arithmetic_xst.xrpt"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="FU_aritmetic_test_beh.prj"/>
@@ -257,6 +280,8 @@
     <transform xil_pn:end_ts="1540396577" xil_pn:in_ck="-6486935551959969914" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="3034789651509154815" xil_pn:start_ts="1540396566">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name=".lso"/>
       <outfile xil_pn:name="FU_arithmetic.lso"/>
       <outfile xil_pn:name="FU_arithmetic.ngc"/>
@@ -272,10 +297,52 @@
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1540308900" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="7560811873589262689" xil_pn:start_ts="1540308900">
+    <transform xil_pn:end_ts="1540397291" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-3523125988359139268" xil_pn:start_ts="1540397291">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
+    </transform>
+    <transform xil_pn:end_ts="1540397298" xil_pn:in_ck="-8144727533389922679" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-5790451146653615729" xil_pn:start_ts="1540397291">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="FU_arithmetic.bld"/>
+      <outfile xil_pn:name="FU_arithmetic.ngd"/>
+      <outfile xil_pn:name="FU_arithmetic_ngdbuild.xrpt"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1540397304" xil_pn:in_ck="-4702542074400932197" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-7002665599540990466" xil_pn:start_ts="1540397298">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="FU_arithmetic.pcf"/>
+      <outfile xil_pn:name="FU_arithmetic_map.map"/>
+      <outfile xil_pn:name="FU_arithmetic_map.mrp"/>
+      <outfile xil_pn:name="FU_arithmetic_map.ncd"/>
+      <outfile xil_pn:name="FU_arithmetic_map.ngm"/>
+      <outfile xil_pn:name="FU_arithmetic_map.xrpt"/>
+      <outfile xil_pn:name="FU_arithmetic_summary.xml"/>
+      <outfile xil_pn:name="FU_arithmetic_usage.xml"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1540397339" xil_pn:in_ck="-3200913187009739795" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-1229177303592316936" xil_pn:start_ts="1540397304">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="FU_arithmetic.ncd"/>
+      <outfile xil_pn:name="FU_arithmetic.pad"/>
+      <outfile xil_pn:name="FU_arithmetic.par"/>
+      <outfile xil_pn:name="FU_arithmetic.ptwx"/>
+      <outfile xil_pn:name="FU_arithmetic.unroutes"/>
+      <outfile xil_pn:name="FU_arithmetic.xpi"/>
+      <outfile xil_pn:name="FU_arithmetic_pad.csv"/>
+      <outfile xil_pn:name="FU_arithmetic_pad.txt"/>
+      <outfile xil_pn:name="FU_arithmetic_par.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1540397339" xil_pn:in_ck="1021098114550293779" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416187" xil_pn:start_ts="1540397335">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="FU_arithmetic.twr"/>
+      <outfile xil_pn:name="FU_arithmetic.twx"/>
+      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
     </transform>
   </transforms>
 

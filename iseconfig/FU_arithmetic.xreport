@@ -1,17 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-10-24T18:59:25</DateModified>
+  <DateModified>2018-10-24T19:08:06</DateModified>
   <ModuleName>FU_arithmetic</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>C:/arxitektonikh1/iseconfig/FU_arithmetic.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/arxitektonikh1</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>C:/arxitektonikh1\</ImplementationReportsDirectory>
   <DateInitialized>2018-10-24T18:59:25</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>
   <viewgroup label="Design Overview" >
-   <view inputState="Unknown" program="implementation" ShowPartitionData="false" type="FPGASummary" file="FU_arithmetic_summary.html" label="Summary" >
+   <view inputState="Unknown" program="implementation" ShowPartitionData="false" ExpandConstraints="false" type="FPGASummary" file="FU_arithmetic_summary.html" label="Summary" ExpandClockNets="false" ExpandWarnings="false" >
     <toc-item title="Design Overview" target="Design Overview" />
     <toc-item title="Design Utilization Summary" target="Design Utilization Summary" />
     <toc-item title="Performance Summary" target="Performance Summary" />

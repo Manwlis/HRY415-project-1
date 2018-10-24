@@ -8,3 +8,7 @@ xst -intstyle ise -ifn "C:/arxitektonikh1/FU_arithmetic.xst" -ofn "C:/arxitekton
 xst -intstyle ise -ifn "C:/arxitektonikh1/FU_arithmetic.xst" -ofn "C:/arxitektonikh1/FU_arithmetic.syr" 
 xst -intstyle ise -ifn "C:/arxitektonikh1/FU_arithmetic.xst" -ofn "C:/arxitektonikh1/FU_arithmetic.syr" 
 xst -intstyle ise -ifn "C:/arxitektonikh1/FU_arithmetic.xst" -ofn "C:/arxitektonikh1/FU_arithmetic.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s1600e-fg320-5 FU_arithmetic.ngc FU_arithmetic.ngd  
+map -intstyle ise -p xc3s1600e-fg320-5 -cm area -ir off -pr off -c 100 -o FU_arithmetic_map.ncd FU_arithmetic.ngd FU_arithmetic.pcf 
+par -w -intstyle ise -ol high -t 1 FU_arithmetic_map.ncd FU_arithmetic.ncd FU_arithmetic.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml FU_arithmetic.twx FU_arithmetic.ncd -o FU_arithmetic.twr FU_arithmetic.pcf 
