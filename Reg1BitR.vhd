@@ -34,7 +34,7 @@ entity Reg1BitR is
            WrEn : in  STD_LOGIC;
            Din : in  STD_LOGIC;
 			  Reset : in STD_LOGIC;
-           Dout : out  STD_LOGIC);
+           Dout : out  STD_LOGIC:= '0');
 end Reg1BitR;
 
 architecture Behavioral of Reg1BitR is

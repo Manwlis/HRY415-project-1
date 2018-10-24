@@ -3,14 +3,14 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: CDBunit.prj
 
@@ -68,7 +68,7 @@ Automatic Register Balancing       : No
 
 ---- Target Options
 Add IO Buffers                     : YES
-Global Maximum Fanout              : 500
+Global Maximum Fanout              : 100000
 Add Generic Clock Buffer(BUFG)     : 24
 Register Duplication               : YES
 Slice Packing                      : YES
@@ -120,10 +120,12 @@ Compiling vhdl file "C:/arxitektonikh1/mux4to1_5bit.vhd" in Library work.
 Architecture behavioral of Entity mux4to1_5bit is up to date.
 Compiling vhdl file "C:/arxitektonikh1/CDB_control.vhd" in Library work.
 Architecture behavioral of Entity cdb_control is up to date.
-Compiling vhdl file "C:/arxitektonikh1/Reg4BitR.vhd" in Library work.
-Architecture behavioral of Entity reg4bitr is up to date.
+Compiling vhdl file "C:/arxitektonikh1/Reg2BitR.vhd" in Library work.
+Entity <Reg2BitR> compiled.
+Entity <Reg2BitR> (Architecture <Behavioral>) compiled.
 Compiling vhdl file "C:/arxitektonikh1/CDBunit.vhd" in Library work.
-Architecture behavioral of Entity cdbunit is up to date.
+Entity <cdbunit> compiled.
+Entity <cdbunit> (Architecture <behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -138,7 +140,7 @@ Analyzing hierarchy for entity <CDB_control> in library <work> (architecture <be
 
 Analyzing hierarchy for entity <Reg1BitR> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <Reg4BitR> in library <work> (architecture <behavioral>).
+Analyzing hierarchy for entity <Reg2BitR> in library <work> (architecture <Behavioral>).
 
 Analyzing hierarchy for entity <mux32Bit> in library <work> (architecture <behavioral>).
 
@@ -185,8 +187,8 @@ Entity <Reg1BitR> analyzed. Unit <Reg1BitR> generated.
 Analyzing Entity <flipflop> in library <work> (Architecture <behavioral>).
 Entity <flipflop> analyzed. Unit <flipflop> generated.
 
-Analyzing Entity <Reg4BitR> in library <work> (Architecture <behavioral>).
-Entity <Reg4BitR> analyzed. Unit <Reg4BitR> generated.
+Analyzing Entity <Reg2BitR> in library <work> (Architecture <Behavioral>).
+Entity <Reg2BitR> analyzed. Unit <Reg2BitR> generated.
 
 
 =========================================================================
@@ -247,14 +249,13 @@ Synthesizing Unit <mux4to1_5bit>.
 Unit <mux4to1_5bit> synthesized.
 
 
-Synthesizing Unit <Reg4BitR>.
-    Related source file is "C:/arxitektonikh1/Reg4BitR.vhd".
-Unit <Reg4BitR> synthesized.
+Synthesizing Unit <Reg2BitR>.
+    Related source file is "C:/arxitektonikh1/Reg2BitR.vhd".
+Unit <Reg2BitR> synthesized.
 
 
 Synthesizing Unit <CDBunit>.
     Related source file is "C:/arxitektonikh1/CDBunit.vhd".
-WARNING:Xst:646 - Signal <sel<3:2>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 Unit <CDBunit> synthesized.
 
 
@@ -264,8 +265,8 @@ HDL Synthesis Report
 Macro Statistics
 # ROMs                                                 : 1
  8x1-bit ROM                                           : 1
-# Registers                                            : 6
- 1-bit register                                        : 5
+# Registers                                            : 4
+ 1-bit register                                        : 3
  4-bit register                                        : 1
 # Multiplexers                                         : 2
  2-bit 8-to-1 multiplexer                              : 1
@@ -277,10 +278,6 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1290 - Hierarchical block <Reg1BitR3> is unconnected in block <sel_reg>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <Reg1BitR2> is unconnected in block <sel_reg>.
-   It will be removed from the design.
 WARNING:Xst:2677 - Node <currentState_3> of sequential type is unconnected in block <CDB_control0>.
 WARNING:Xst:2677 - Node <currentState_3> of sequential type is unconnected in block <CDB_control>.
 
@@ -290,8 +287,8 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # ROMs                                                 : 1
  8x1-bit ROM                                           : 1
-# Registers                                            : 8
- Flip-Flops                                            : 8
+# Registers                                            : 6
+ Flip-Flops                                            : 6
 # Multiplexers                                         : 2
  2-bit 8-to-1 multiplexer                              : 1
  3-bit 8-to-1 multiplexer                              : 1
@@ -301,8 +298,6 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:2677 - Node <sel_reg/Reg1BitR3/flipflop0/q> of sequential type is unconnected in block <CDBunit>.
-WARNING:Xst:2677 - Node <sel_reg/Reg1BitR2/flipflop0/q> of sequential type is unconnected in block <CDBunit>.
 
 Optimizing unit <CDBunit> ...
 
@@ -513,13 +508,13 @@ Delay:               6.951ns (Levels of Logic = 4)
 
 
 Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 7.30 secs
+Total CPU time to Xst completion: 7.70 secs
  
 --> 
 
-Total memory usage is 254484 kilobytes
+Total memory usage is 258212 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    7 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

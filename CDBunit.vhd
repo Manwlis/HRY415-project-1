@@ -46,49 +46,55 @@ end CDBunit;
 architecture Behavioral of CDBunit is
 
 COMPONENT mux4to1_32Bit
-PORT(
-	A : IN  std_logic_vector(31 downto 0);
-	B : IN  std_logic_vector(31 downto 0);
-	C : IN  std_logic_vector(31 downto 0);
-	D : IN  std_logic_vector(31 downto 0);
-	sel : IN  std_logic_vector(1 downto 0);
-	output : OUT  std_logic_vector(31 downto 0));
+	PORT(
+		A : IN  std_logic_vector(31 downto 0);
+		B : IN  std_logic_vector(31 downto 0);
+		C : IN  std_logic_vector(31 downto 0);
+		D : IN  std_logic_vector(31 downto 0);
+		sel : IN  std_logic_vector(1 downto 0);
+		output : OUT  std_logic_vector(31 downto 0));
 END COMPONENT;
 
 COMPONENT mux4to1_5bit
-Port ( 
-	sel : in  STD_LOGIC_VECTOR (1 downto 0);
-           A : in  STD_LOGIC_VECTOR (4 downto 0);
-           B : in  STD_LOGIC_VECTOR (4 downto 0);
-           C : in  STD_LOGIC_VECTOR (4 downto 0);
-           D : in  STD_LOGIC_VECTOR (4 downto 0);
-           output : out  STD_LOGIC_VECTOR (4 downto 0));
+	Port ( 
+		sel : in  STD_LOGIC_VECTOR (1 downto 0);
+		A : in  STD_LOGIC_VECTOR (4 downto 0);
+		B : in  STD_LOGIC_VECTOR (4 downto 0);
+		C : in  STD_LOGIC_VECTOR (4 downto 0);
+		D : in  STD_LOGIC_VECTOR (4 downto 0);
+		output : out  STD_LOGIC_VECTOR (4 downto 0));
 end COMPONENT;
 
 COMPONENT CDB_control
-    Port ( request : in  STD_LOGIC_VECTOR (2 downto 0);
-           grant : out  STD_LOGIC_VECTOR (2 downto 0);
-           CDBvalid : out  STD_LOGIC;
-           sel : out  STD_LOGIC_VECTOR (1 downto 0);
-			  Clk : in STD_LOGIC);
+	Port ( request : in  STD_LOGIC_VECTOR (2 downto 0);
+		grant : out  STD_LOGIC_VECTOR (2 downto 0);
+		CDBvalid : out  STD_LOGIC;
+		sel : out  STD_LOGIC_VECTOR (1 downto 0);
+		Clk : in STD_LOGIC);
 end COMPONENT;
 
 COMPONENT Reg1BitR
-port
-(Clk,WrEn,Din,Reset : in std_logic;
- Dout : out std_logic);
+	port(
+		Clk,WrEn,Din,Reset : in std_logic;
+		Dout : out std_logic);
 END COMPONENT;
 
 COMPONENT Reg4BitR
-port
-(Clk,WrEn,Reset : in std_logic;
- Din : in  STD_LOGIC_VECTOR (3 downto 0);
- Dout : out std_logic_VECTOR (3 downto 0)); 
+	port(
+		Clk,WrEn,Reset : in std_logic;
+		Din : in  STD_LOGIC_VECTOR (3 downto 0);
+		Dout : out std_logic_VECTOR (3 downto 0)); 
+END COMPONENT;
+
+COMPONENT Reg2BitR
+	port(
+		Clk,WrEn,Reset : in std_logic;
+		Din : in  STD_LOGIC_VECTOR (1 downto 0);
+		Dout : out std_logic_VECTOR (1 downto 0)); 
 END COMPONENT;
 
 signal control_valid : STD_LOGIC;
-signal control_sel : STD_LOGIC_VECTOR (1 downto 0); 
-signal sel,temp_sel : STD_LOGIC_VECTOR (3 downto 0);
+signal sel_before_reg, sel : STD_LOGIC_VECTOR (1 downto 0);
 begin
 
 value_mux : mux4to1_32Bit
@@ -97,7 +103,7 @@ port map(
  B => Value2,
  C => Value3,
  D => "00000000000000000000000000000000",
- sel => sel(1 downto 0),
+ sel => sel,
  output => CDBout(31 downto 0));
 
 Q_mux : mux4to1_5bit
@@ -106,7 +112,7 @@ port map(
  B => Q2,
  C => Q3,
  D => "00000",
- sel => sel(1 downto 0),
+ sel => sel,
  output => CDBout(36 downto 32));
 
 CDB_control0 : CDB_control
@@ -114,7 +120,7 @@ port map(
  request => request,
  grant => grant,
  CDBvalid => control_valid,
- sel => control_sel,
+ sel => sel_before_reg,
  Clk => Clk);
 
 valid_reg : Reg1BitR
@@ -124,16 +130,14 @@ port map(
  Reset => '0',
  Din => control_valid,
  Dout => CDBout(37));
-  
-sel_reg : Reg4BitR
+
+sel_reg : Reg2BitR
 port map(
  Clk => Clk,
  WrEn => '1',
  Reset => '0',
- Din => temp_sel,
+ Din => sel_before_reg,
  Dout => sel);
-
-temp_sel <= "00" & control_sel;
 
 end Behavioral;
 

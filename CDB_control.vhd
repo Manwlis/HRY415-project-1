@@ -38,8 +38,7 @@ begin
 				sig_grant <= "001";
 				CDBvalid <= '1';
 				
-			--	me sigkrouseis
-				
+			--	me sigkrouseis	
 			when "011" =>
 				if currentState = grantC then 
 					sel <= "01";
@@ -93,10 +92,10 @@ begin
 				sel <= "11";
 				sig_grant <= "000";
 				CDBvalid <= '0';
-		--	round droping gia sigkrouseis--------------------------
 		end case;	
 	end process;
 
+	-- 8imatai piws xrhsimopoihse to cdb ton proigoumeno kuklo
 	round_robbing_mem: process (currentState,sig_grant,Clk)
 	begin
 
@@ -112,6 +111,7 @@ begin
 
 	end process;
 	
+	-- roloi
 	FSM_CLOCK:  PROCESS (Clk)
 	begin
 		if (rising_edge(Clk)) then 

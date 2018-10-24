@@ -6,7 +6,7 @@ entity mux is
     Port ( in0 : in  STD_LOGIC;
            in1 : in  STD_LOGIC;
 			  sel : in  STD_LOGIC;
-           output : out  STD_LOGIC);
+           output : out  STD_LOGIC := '0');
 end mux;
 
 architecture Behavioral of mux is

@@ -1,0 +1,29 @@
+Command line:
+   FU_logical_test_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  51718
+
+Wed Oct 24 18:48:40 2018
+
+
+ Elaboration Time: 0.0468 sec
+
+ Current Memory Usage: 509.485 Meg
+
+ Total Signals          : 1813
+ Total Nets             : 440
+ Total Signal Drivers   : 334
+ Total Blocks           : 359
+ Total Primitive Blocks : 219
+ Total Processes        : 328
+ Total Traceable Variables  : 9
+ Total Scalar Nets and Variables : 801
+Total Line Count : 475
+
+ Total Simulation Time: 0.0624 sec
+
+ Current Memory Usage: 509.485 Meg
+
+Wed Oct 24 18:48:43 2018
+

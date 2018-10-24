@@ -3,13 +3,13 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: FU_logical.prj
@@ -68,7 +68,7 @@ Automatic Register Balancing       : No
 
 ---- Target Options
 Add IO Buffers                     : YES
-Global Maximum Fanout              : 500
+Global Maximum Fanout              : 100000
 Add Generic Clock Buffer(BUFG)     : 24
 Register Duplication               : YES
 Slice Packing                      : YES
@@ -114,13 +114,17 @@ Compiling vhdl file "C:/arxitektonikh1/Reg4BitR.vhd" in Library work.
 Architecture behavioral of Entity reg4bitr is up to date.
 Compiling vhdl file "C:/arxitektonikh1/Reg32BitR.vhd" in Library work.
 Architecture structural of Entity reg32bitr is up to date.
+Compiling vhdl file "C:/arxitektonikh1/Reg2BitR.vhd" in Library work.
+Architecture behavioral of Entity reg2bitr is up to date.
+Compiling vhdl file "C:/arxitektonikh1/Reg5BitR.vhd" in Library work.
+Architecture behavioral of Entity reg5bitr is up to date.
 Compiling vhdl file "C:/arxitektonikh1/logical_unit.vhd" in Library work.
 Architecture behavioral of Entity logical_unit is up to date.
 Compiling vhdl file "C:/arxitektonikh1/FU_logical_control.vhd" in Library work.
-Architecture behavioral of Entity fu_logical_control is up to date.
+Entity <fu_logical_control> compiled.
+Entity <fu_logical_control> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/arxitektonikh1/FU_logical.vhd" in Library work.
-Entity <fu_logical> compiled.
-Entity <fu_logical> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity fu_logical is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -129,7 +133,13 @@ Analyzing hierarchy for entity <FU_logical> in library <work> (architecture <beh
 
 Analyzing hierarchy for entity <Reg32BitR> in library <work> (architecture <structural>).
 
+Analyzing hierarchy for entity <Reg2BitR> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Reg5BitR> in library <work> (architecture <behavioral>).
+
 Analyzing hierarchy for entity <logical_unit> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <FU_logical_control> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <Reg4BitR> in library <work> (architecture <behavioral>).
 
@@ -144,7 +154,6 @@ Analyzing hierarchy for entity <flipflop> in library <work> (architecture <behav
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <FU_logical> in library <work> (Architecture <behavioral>).
-WARNING:Xst:2211 - "C:/arxitektonikh1/FU_logical.vhd" line 99: Instantiating black box module <FU_logical_control>.
 Entity <FU_logical> analyzed. Unit <FU_logical> generated.
 
 Analyzing Entity <Reg32BitR> in library <work> (Architecture <structural>).
@@ -162,8 +171,17 @@ Entity <mux> analyzed. Unit <mux> generated.
 Analyzing Entity <flipflop> in library <work> (Architecture <behavioral>).
 Entity <flipflop> analyzed. Unit <flipflop> generated.
 
+Analyzing Entity <Reg2BitR> in library <work> (Architecture <behavioral>).
+Entity <Reg2BitR> analyzed. Unit <Reg2BitR> generated.
+
+Analyzing Entity <Reg5BitR> in library <work> (Architecture <behavioral>).
+Entity <Reg5BitR> analyzed. Unit <Reg5BitR> generated.
+
 Analyzing Entity <logical_unit> in library <work> (Architecture <behavioral>).
 Entity <logical_unit> analyzed. Unit <logical_unit> generated.
+
+Analyzing Entity <FU_logical_control> in library <work> (Architecture <behavioral>).
+Entity <FU_logical_control> analyzed. Unit <FU_logical_control> generated.
 
 
 =========================================================================
@@ -178,6 +196,11 @@ Synthesizing Unit <logical_unit>.
     Summary:
 	inferred  32 Multiplexer(s).
 Unit <logical_unit> synthesized.
+
+
+Synthesizing Unit <FU_logical_control>.
+    Related source file is "C:/arxitektonikh1/FU_logical_control.vhd".
+Unit <FU_logical_control> synthesized.
 
 
 Synthesizing Unit <mux>.
@@ -198,6 +221,16 @@ Synthesizing Unit <Reg1BitR>.
 Unit <Reg1BitR> synthesized.
 
 
+Synthesizing Unit <Reg2BitR>.
+    Related source file is "C:/arxitektonikh1/Reg2BitR.vhd".
+Unit <Reg2BitR> synthesized.
+
+
+Synthesizing Unit <Reg5BitR>.
+    Related source file is "C:/arxitektonikh1/Reg5BitR.vhd".
+Unit <Reg5BitR> synthesized.
+
+
 Synthesizing Unit <Reg4BitR>.
     Related source file is "C:/arxitektonikh1/Reg4BitR.vhd".
 Unit <Reg4BitR> synthesized.
@@ -210,9 +243,6 @@ Unit <Reg32BitR> synthesized.
 
 Synthesizing Unit <FU_logical>.
     Related source file is "C:/arxitektonikh1/FU_logical.vhd".
-WARNING:Xst:653 - Signal <stage2_enable> is used but never assigned. This sourceless signal will be automatically connected to value 0.
-WARNING:Xst:646 - Signal <q_reg_out<31:7>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <q_reg_out<1:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 Unit <FU_logical> synthesized.
 
 
@@ -220,8 +250,8 @@ Unit <FU_logical> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Registers                                            : 160
- 1-bit register                                        : 160
+# Registers                                            : 108
+ 1-bit register                                        : 108
 # Multiplexers                                         : 1
  32-bit 4-to-1 multiplexer                             : 1
 
@@ -231,53 +261,13 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1290 - Hierarchical block <Reg4BitR7> is unconnected in block <tag_op_reg>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <Reg4BitR6> is unconnected in block <tag_op_reg>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <Reg4BitR5> is unconnected in block <tag_op_reg>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <Reg4BitR4> is unconnected in block <tag_op_reg>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <Reg4BitR3> is unconnected in block <tag_op_reg>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <Reg4BitR2> is unconnected in block <tag_op_reg>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <Reg1BitR3> is unconnected in block <Reg4BitR1>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <Reg4BitR7> is unconnected in block <q_reg>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <Reg4BitR6> is unconnected in block <q_reg>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <Reg4BitR5> is unconnected in block <q_reg>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <Reg4BitR4> is unconnected in block <q_reg>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <Reg4BitR3> is unconnected in block <q_reg>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <Reg4BitR2> is unconnected in block <q_reg>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <Reg1BitR3> is unconnected in block <Reg4BitR1>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <Reg1BitR1> is unconnected in block <Reg4BitR0>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <Reg1BitR0> is unconnected in block <Reg4BitR0>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <Value_in1_reg> is unconnected in block <FU_logical>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <Value_in2_reg> is unconnected in block <FU_logical>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <tag_op_reg> is unconnected in block <FU_logical>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <execution_module> is unconnected in block <FU_logical>.
-   It will be removed from the design.
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Registers                                            : 160
- Flip-Flops                                            : 160
+# Registers                                            : 108
+ Flip-Flops                                            : 108
 # Multiplexers                                         : 1
  32-bit 4-to-1 multiplexer                             : 1
 
@@ -292,170 +282,8 @@ Optimizing unit <FU_logical> ...
 Optimizing unit <logical_unit> ...
 
 Optimizing unit <Reg32BitR> ...
-WARNING:Xst:1293 - FF/Latch <Result_reg/Reg4BitR4/Reg1BitR2/flipflop0/q> has a constant value of 0 in block <FU_logical>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Result_reg/Reg4BitR4/Reg1BitR3/flipflop0/q> has a constant value of 0 in block <FU_logical>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Result_reg/Reg4BitR3/Reg1BitR0/flipflop0/q> has a constant value of 0 in block <FU_logical>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Result_reg/Reg4BitR3/Reg1BitR1/flipflop0/q> has a constant value of 0 in block <FU_logical>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Result_reg/Reg4BitR3/Reg1BitR2/flipflop0/q> has a constant value of 0 in block <FU_logical>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Result_reg/Reg4BitR3/Reg1BitR3/flipflop0/q> has a constant value of 0 in block <FU_logical>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Result_reg/Reg4BitR2/Reg1BitR0/flipflop0/q> has a constant value of 0 in block <FU_logical>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Result_reg/Reg4BitR2/Reg1BitR1/flipflop0/q> has a constant value of 0 in block <FU_logical>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Result_reg/Reg4BitR2/Reg1BitR2/flipflop0/q> has a constant value of 0 in block <FU_logical>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Result_reg/Reg4BitR2/Reg1BitR3/flipflop0/q> has a constant value of 0 in block <FU_logical>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Result_reg/Reg4BitR1/Reg1BitR0/flipflop0/q> has a constant value of 0 in block <FU_logical>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Result_reg/Reg4BitR1/Reg1BitR1/flipflop0/q> has a constant value of 0 in block <FU_logical>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Result_reg/Reg4BitR1/Reg1BitR2/flipflop0/q> has a constant value of 0 in block <FU_logical>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Result_reg/Reg4BitR1/Reg1BitR3/flipflop0/q> has a constant value of 0 in block <FU_logical>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Result_reg/Reg4BitR0/Reg1BitR0/flipflop0/q> has a constant value of 0 in block <FU_logical>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Result_reg/Reg4BitR0/Reg1BitR1/flipflop0/q> has a constant value of 0 in block <FU_logical>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Result_reg/Reg4BitR0/Reg1BitR2/flipflop0/q> has a constant value of 0 in block <FU_logical>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Result_reg/Reg4BitR0/Reg1BitR3/flipflop0/q> has a constant value of 0 in block <FU_logical>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <tag_op_reg/Reg4BitR1/Reg1BitR2/flipflop0/q> has a constant value of 0 in block <FU_logical>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <q_reg/Reg4BitR1/Reg1BitR0/flipflop0/q> has a constant value of 0 in block <FU_logical>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <q_reg/Reg4BitR1/Reg1BitR1/flipflop0/q> has a constant value of 0 in block <FU_logical>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <q_reg/Reg4BitR1/Reg1BitR2/flipflop0/q> has a constant value of 0 in block <FU_logical>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <q_reg/Reg4BitR0/Reg1BitR2/flipflop0/q> has a constant value of 0 in block <FU_logical>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <q_reg/Reg4BitR0/Reg1BitR3/flipflop0/q> has a constant value of 0 in block <FU_logical>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Result_reg/Reg4BitR7/Reg1BitR0/flipflop0/q> has a constant value of 0 in block <FU_logical>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Result_reg/Reg4BitR7/Reg1BitR1/flipflop0/q> has a constant value of 0 in block <FU_logical>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Result_reg/Reg4BitR7/Reg1BitR2/flipflop0/q> has a constant value of 0 in block <FU_logical>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Result_reg/Reg4BitR7/Reg1BitR3/flipflop0/q> has a constant value of 0 in block <FU_logical>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Result_reg/Reg4BitR6/Reg1BitR0/flipflop0/q> has a constant value of 0 in block <FU_logical>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Result_reg/Reg4BitR6/Reg1BitR1/flipflop0/q> has a constant value of 0 in block <FU_logical>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Result_reg/Reg4BitR6/Reg1BitR2/flipflop0/q> has a constant value of 0 in block <FU_logical>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Result_reg/Reg4BitR6/Reg1BitR3/flipflop0/q> has a constant value of 0 in block <FU_logical>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Result_reg/Reg4BitR5/Reg1BitR0/flipflop0/q> has a constant value of 0 in block <FU_logical>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Result_reg/Reg4BitR5/Reg1BitR1/flipflop0/q> has a constant value of 0 in block <FU_logical>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Result_reg/Reg4BitR5/Reg1BitR2/flipflop0/q> has a constant value of 0 in block <FU_logical>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Result_reg/Reg4BitR5/Reg1BitR3/flipflop0/q> has a constant value of 0 in block <FU_logical>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Result_reg/Reg4BitR4/Reg1BitR0/flipflop0/q> has a constant value of 0 in block <FU_logical>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Result_reg/Reg4BitR4/Reg1BitR1/flipflop0/q> has a constant value of 0 in block <FU_logical>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2677 - Node <q_reg/Reg4BitR7/Reg1BitR0/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <q_reg/Reg4BitR7/Reg1BitR1/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <q_reg/Reg4BitR7/Reg1BitR2/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <q_reg/Reg4BitR7/Reg1BitR3/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <q_reg/Reg4BitR6/Reg1BitR0/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <q_reg/Reg4BitR6/Reg1BitR1/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <q_reg/Reg4BitR6/Reg1BitR2/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <q_reg/Reg4BitR6/Reg1BitR3/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <q_reg/Reg4BitR5/Reg1BitR0/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <q_reg/Reg4BitR5/Reg1BitR1/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <q_reg/Reg4BitR5/Reg1BitR2/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <q_reg/Reg4BitR5/Reg1BitR3/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <q_reg/Reg4BitR4/Reg1BitR0/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <q_reg/Reg4BitR4/Reg1BitR1/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <q_reg/Reg4BitR4/Reg1BitR2/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <q_reg/Reg4BitR4/Reg1BitR3/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <q_reg/Reg4BitR3/Reg1BitR0/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <q_reg/Reg4BitR3/Reg1BitR1/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <q_reg/Reg4BitR3/Reg1BitR2/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <q_reg/Reg4BitR3/Reg1BitR3/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <q_reg/Reg4BitR2/Reg1BitR0/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <q_reg/Reg4BitR2/Reg1BitR1/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <q_reg/Reg4BitR2/Reg1BitR2/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <q_reg/Reg4BitR2/Reg1BitR3/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <q_reg/Reg4BitR1/Reg1BitR3/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <q_reg/Reg4BitR0/Reg1BitR0/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <q_reg/Reg4BitR0/Reg1BitR1/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <tag_op_reg/Reg4BitR7/Reg1BitR0/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <tag_op_reg/Reg4BitR7/Reg1BitR1/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <tag_op_reg/Reg4BitR7/Reg1BitR2/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <tag_op_reg/Reg4BitR7/Reg1BitR3/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <tag_op_reg/Reg4BitR6/Reg1BitR0/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <tag_op_reg/Reg4BitR6/Reg1BitR1/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <tag_op_reg/Reg4BitR6/Reg1BitR2/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <tag_op_reg/Reg4BitR6/Reg1BitR3/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <tag_op_reg/Reg4BitR5/Reg1BitR0/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <tag_op_reg/Reg4BitR5/Reg1BitR1/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <tag_op_reg/Reg4BitR5/Reg1BitR2/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <tag_op_reg/Reg4BitR5/Reg1BitR3/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <tag_op_reg/Reg4BitR4/Reg1BitR0/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <tag_op_reg/Reg4BitR4/Reg1BitR1/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <tag_op_reg/Reg4BitR4/Reg1BitR2/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <tag_op_reg/Reg4BitR4/Reg1BitR3/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <tag_op_reg/Reg4BitR3/Reg1BitR0/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <tag_op_reg/Reg4BitR3/Reg1BitR1/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <tag_op_reg/Reg4BitR3/Reg1BitR2/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <tag_op_reg/Reg4BitR3/Reg1BitR3/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <tag_op_reg/Reg4BitR2/Reg1BitR0/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <tag_op_reg/Reg4BitR2/Reg1BitR1/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <tag_op_reg/Reg4BitR2/Reg1BitR2/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <tag_op_reg/Reg4BitR2/Reg1BitR3/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <tag_op_reg/Reg4BitR1/Reg1BitR3/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <tag_op_reg/Reg4BitR1/Reg1BitR0/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <tag_op_reg/Reg4BitR1/Reg1BitR1/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <tag_op_reg/Reg4BitR0/Reg1BitR0/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <tag_op_reg/Reg4BitR0/Reg1BitR1/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <tag_op_reg/Reg4BitR0/Reg1BitR2/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <tag_op_reg/Reg4BitR0/Reg1BitR3/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in2_reg/Reg4BitR7/Reg1BitR0/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in2_reg/Reg4BitR7/Reg1BitR1/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in2_reg/Reg4BitR7/Reg1BitR2/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in2_reg/Reg4BitR7/Reg1BitR3/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in2_reg/Reg4BitR6/Reg1BitR0/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in2_reg/Reg4BitR6/Reg1BitR1/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in2_reg/Reg4BitR6/Reg1BitR2/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in2_reg/Reg4BitR6/Reg1BitR3/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in2_reg/Reg4BitR5/Reg1BitR0/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in2_reg/Reg4BitR5/Reg1BitR1/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in2_reg/Reg4BitR5/Reg1BitR2/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in2_reg/Reg4BitR5/Reg1BitR3/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in2_reg/Reg4BitR4/Reg1BitR0/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in2_reg/Reg4BitR4/Reg1BitR1/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in2_reg/Reg4BitR4/Reg1BitR2/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in2_reg/Reg4BitR4/Reg1BitR3/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in2_reg/Reg4BitR3/Reg1BitR0/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in2_reg/Reg4BitR3/Reg1BitR1/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in2_reg/Reg4BitR3/Reg1BitR2/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in2_reg/Reg4BitR3/Reg1BitR3/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in2_reg/Reg4BitR2/Reg1BitR0/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in2_reg/Reg4BitR2/Reg1BitR1/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in2_reg/Reg4BitR2/Reg1BitR2/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in2_reg/Reg4BitR2/Reg1BitR3/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in2_reg/Reg4BitR1/Reg1BitR0/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in2_reg/Reg4BitR1/Reg1BitR1/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in2_reg/Reg4BitR1/Reg1BitR2/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in2_reg/Reg4BitR1/Reg1BitR3/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in2_reg/Reg4BitR0/Reg1BitR0/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in2_reg/Reg4BitR0/Reg1BitR1/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in2_reg/Reg4BitR0/Reg1BitR2/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in2_reg/Reg4BitR0/Reg1BitR3/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in1_reg/Reg4BitR7/Reg1BitR0/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in1_reg/Reg4BitR7/Reg1BitR1/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in1_reg/Reg4BitR7/Reg1BitR2/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in1_reg/Reg4BitR7/Reg1BitR3/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in1_reg/Reg4BitR6/Reg1BitR0/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in1_reg/Reg4BitR6/Reg1BitR1/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in1_reg/Reg4BitR6/Reg1BitR2/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in1_reg/Reg4BitR6/Reg1BitR3/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in1_reg/Reg4BitR5/Reg1BitR0/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in1_reg/Reg4BitR5/Reg1BitR1/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in1_reg/Reg4BitR5/Reg1BitR2/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in1_reg/Reg4BitR5/Reg1BitR3/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in1_reg/Reg4BitR4/Reg1BitR0/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in1_reg/Reg4BitR4/Reg1BitR1/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in1_reg/Reg4BitR4/Reg1BitR2/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in1_reg/Reg4BitR4/Reg1BitR3/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in1_reg/Reg4BitR3/Reg1BitR0/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in1_reg/Reg4BitR3/Reg1BitR1/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in1_reg/Reg4BitR3/Reg1BitR2/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in1_reg/Reg4BitR3/Reg1BitR3/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in1_reg/Reg4BitR2/Reg1BitR0/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in1_reg/Reg4BitR2/Reg1BitR1/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in1_reg/Reg4BitR2/Reg1BitR2/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in1_reg/Reg4BitR2/Reg1BitR3/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in1_reg/Reg4BitR1/Reg1BitR0/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in1_reg/Reg4BitR1/Reg1BitR1/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in1_reg/Reg4BitR1/Reg1BitR2/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in1_reg/Reg4BitR1/Reg1BitR3/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in1_reg/Reg4BitR0/Reg1BitR0/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in1_reg/Reg4BitR0/Reg1BitR1/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in1_reg/Reg4BitR0/Reg1BitR2/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
-WARNING:Xst:2677 - Node <Value_in1_reg/Reg4BitR0/Reg1BitR3/flipflop0/q> of sequential type is unconnected in block <FU_logical>.
 
 Mapping all equations...
-WARNING:Xst:2036 - Inserting OBUF on port <request> driven by black box <FU_logical_control>. Possible simulation mismatch.
-WARNING:Xst:2036 - Inserting OBUF on port <ready> driven by black box <FU_logical_control>. Possible simulation mismatch.
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block FU_logical, actual ratio is 0.
 
@@ -464,7 +292,10 @@ Final Macro Processing ...
 =========================================================================
 Final Register Report
 
-Found no macro
+Macro Statistics
+# Registers                                            : 108
+ Flip-Flops                                            : 108
+
 =========================================================================
 
 =========================================================================
@@ -489,16 +320,23 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 111
+# IOs                              : 112
 
 Cell Usage :
-# BELS                             : 1
+# BELS                             : 38
 #      GND                         : 1
-# IO Buffers                       : 45
-#      IBUF                        : 6
+#      LUT3_L                      : 1
+#      LUT4                        : 34
+#      MUXF5                       : 1
+#      VCC                         : 1
+# FlipFlops/Latches                : 108
+#      FDC                         : 37
+#      FDCE                        : 71
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 111
+#      IBUF                        : 72
 #      OBUF                        : 39
-# Others                           : 1
-#      FU_logical_control          : 1
 =========================================================================
 
 Device utilization summary:
@@ -506,9 +344,12 @@ Device utilization summary:
 
 Selected Device : 3s1600efg320-5 
 
- Number of Slices:                        0  out of  14752     0%  
- Number of IOs:                         111
- Number of bonded IOBs:                  45  out of    250    18%  
+ Number of Slices:                       64  out of  14752     0%  
+ Number of Slice Flip Flops:            108  out of  29504     0%  
+ Number of 4 input LUTs:                 35  out of  29504     0%  
+ Number of IOs:                         112
+ Number of bonded IOBs:                 112  out of    250    44%  
+ Number of GCLKs:                         1  out of     24     4%  
 
 ---------------------------
 Partition Resource Summary:
@@ -528,54 +369,127 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
-No clock signals found in this design
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clk                                | BUFGP                  | 108   |
+-----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
-No asynchronous control signals found in this design
+-----------------------------------+-------------------------------------------------+-------+
+Control Signal                     | Buffer(FF name)                                 | Load  |
+-----------------------------------+-------------------------------------------------+-------+
+N0(XST_GND:G)                      | NONE(Result_reg/Reg4BitR0/Reg1BitR0/flipflop0/q)| 108   |
+-----------------------------------+-------------------------------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: No path found
-   Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: No path found
-   Maximum combinational path delay: 3.526ns
+   Minimum period: 4.011ns (Maximum Frequency: 249.317MHz)
+   Minimum input arrival time before clock: 3.794ns
+   Maximum output required time after clock: 6.697ns
+   Maximum combinational path delay: 6.480ns
 
 Timing Detail:
 --------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default path analysis
-  Total number of paths / destination ports: 8 / 8
+Timing constraint: Default period analysis for Clock 'Clk'
+  Clock period: 4.011ns (frequency: 249.317MHz)
+  Total number of paths / destination ports: 488 / 108
 -------------------------------------------------------------------------
-Delay:               3.526ns (Levels of Logic = 1)
-  Source:            control:request (PAD)
-  Destination:       request (PAD)
+Delay:               4.011ns (Levels of Logic = 2)
+  Source:            tag_reg/Reg1BitR3/flipflop0/q (FF)
+  Destination:       op_reg/Reg1BitR1/flipflop0/q (FF)
+  Source Clock:      Clk rising
+  Destination Clock: Clk rising
 
-  Data Path: control:request to request
+  Data Path: tag_reg/Reg1BitR3/flipflop0/q to op_reg/Reg1BitR1/flipflop0/q
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-    FU_logical_control:request    1   0.000   0.357  control (request_OBUF)
-     OBUF:I->O                 3.169          request_OBUF (request)
+     FDCE:C->Q             3   0.514   0.603  tag_reg/Reg1BitR3/flipflop0/q (tag_reg/Reg1BitR3/flipflop0/q)
+     LUT3_L:I0->LO         1   0.612   0.103  control/stage1_enable_SW0 (N2)
+     LUT4:I3->O           72   0.612   1.084  control/stage1_enable (ready_OBUF)
+     FDCE:CE                   0.483          op_reg/Reg1BitR1/flipflop0/q
     ----------------------------------------
-    Total                      3.526ns (3.169ns logic, 0.357ns route)
-                                       (89.9% logic, 10.1% route)
+    Total                      4.011ns (2.221ns logic, 1.790ns route)
+                                       (55.4% logic, 44.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
+  Total number of paths / destination ports: 142 / 142
+-------------------------------------------------------------------------
+Offset:              3.794ns (Levels of Logic = 2)
+  Source:            grant (PAD)
+  Destination:       op_reg/Reg1BitR1/flipflop0/q (FF)
+  Destination Clock: Clk rising
+
+  Data Path: grant to op_reg/Reg1BitR1/flipflop0/q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.106   0.509  grant_IBUF (grant_IBUF)
+     LUT4:I0->O           72   0.612   1.084  control/stage1_enable (ready_OBUF)
+     FDCE:CE                   0.483          op_reg/Reg1BitR1/flipflop0/q
+    ----------------------------------------
+    Total                      3.794ns (2.201ns logic, 1.593ns route)
+                                       (58.0% logic, 42.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk'
+  Total number of paths / destination ports: 47 / 39
+-------------------------------------------------------------------------
+Offset:              6.697ns (Levels of Logic = 3)
+  Source:            tag_reg/Reg1BitR3/flipflop0/q (FF)
+  Destination:       ready (PAD)
+  Source Clock:      Clk rising
+
+  Data Path: tag_reg/Reg1BitR3/flipflop0/q to ready
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.514   0.603  tag_reg/Reg1BitR3/flipflop0/q (tag_reg/Reg1BitR3/flipflop0/q)
+     LUT3_L:I0->LO         1   0.612   0.103  control/stage1_enable_SW0 (N2)
+     LUT4:I3->O           72   0.612   1.084  control/stage1_enable (ready_OBUF)
+     OBUF:I->O                 3.169          ready_OBUF (ready)
+    ----------------------------------------
+    Total                      6.697ns (4.907ns logic, 1.790ns route)
+                                       (73.3% logic, 26.7% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               6.480ns (Levels of Logic = 3)
+  Source:            grant (PAD)
+  Destination:       ready (PAD)
+
+  Data Path: grant to ready
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.106   0.509  grant_IBUF (grant_IBUF)
+     LUT4:I0->O           72   0.612   1.084  control/stage1_enable (ready_OBUF)
+     OBUF:I->O                 3.169          ready_OBUF (ready)
+    ----------------------------------------
+    Total                      6.480ns (4.887ns logic, 1.593ns route)
+                                       (75.4% logic, 24.6% route)
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 7.95 secs
+Total CPU time to Xst completion: 7.35 secs
  
 --> 
 
-Total memory usage is 254548 kilobytes
+Total memory usage is 260452 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  186 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 
