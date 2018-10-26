@@ -1,4 +1,4 @@
-V3 73
+V3 76
 FL C:/arxitektonikh1/arithmetic_unit.vhd 2018/10/24.17:57:26 O.87xd
 EN work/arithmetic_unit 1540396583 FL C:/arxitektonikh1/arithmetic_unit.vhd \
       PB ieee/std_logic_1164 1325952872 PB ieee/STD_LOGIC_UNSIGNED 1325952875
@@ -43,6 +43,11 @@ EN work/FU_logical_control 1540388395 FL C:/arxitektonikh1/FU_logical_control.vh
       PB ieee/std_logic_1164 1325952872
 AR work/FU_logical_control/Behavioral 1540388396 \
       FL C:/arxitektonikh1/FU_logical_control.vhd EN work/FU_logical_control 1540388395
+FL C:/arxitektonikh1/Issue_unit.vhd 2018/10/26.15:02:05 O.87xd
+EN work/Issue_unit 1540555369 FL C:/arxitektonikh1/Issue_unit.vhd \
+      PB ieee/std_logic_1164 1325952872
+AR work/Issue_unit/Structural 1540555370 \
+      FL C:/arxitektonikh1/Issue_unit.vhd EN work/Issue_unit 1540555369
 FL C:/arxitektonikh1/logical_unit.vhd 2018/10/23.20:34:25 O.87xd
 EN work/logical_unit 1540388393 FL C:/arxitektonikh1/logical_unit.vhd \
       PB ieee/std_logic_1164 1325952872

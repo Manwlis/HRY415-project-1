@@ -1,39 +1,18 @@
-Running: E:\Xilinx\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/arxitektonikh1/FU_aritmetic_test_isim_beh.exe -prj C:/arxitektonikh1/FU_aritmetic_test_beh.prj work.FU_aritmetic_test 
+Running: E:\Xilinx\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/arxitektonikh1/Issue_unit_test_isim_beh.exe -prj C:/arxitektonikh1/Issue_unit_test_beh.prj work.Issue_unit_test 
 ISim O.87xd (signature 0xc3576ebc)
 Number of CPUs detected in this system: 16
 Turning on mult-threading, number of parallel sub-compilation jobs: 32 
 Determining compilation order of HDL files
-Parsing VHDL file "C:/arxitektonikh1/mux.vhd" into library work
-Parsing VHDL file "C:/arxitektonikh1/flipflop.vhd" into library work
-Parsing VHDL file "C:/arxitektonikh1/Reg1BitR.vhd" into library work
-Parsing VHDL file "C:/arxitektonikh1/Reg4BitR.vhd" into library work
-Parsing VHDL file "C:/arxitektonikh1/Reg5BitR.vhd" into library work
-Parsing VHDL file "C:/arxitektonikh1/Reg32BitR.vhd" into library work
-Parsing VHDL file "C:/arxitektonikh1/Reg2BitR.vhd" into library work
-Parsing VHDL file "C:/arxitektonikh1/FU_arithmetic_control.vhd" into library work
-Parsing VHDL file "C:/arxitektonikh1/arithmetic_unit.vhd" into library work
-Parsing VHDL file "C:/arxitektonikh1/FU_arithmetic.vhd" into library work
-Parsing VHDL file "C:/arxitektonikh1/FU_aritmetic_test.vhd" into library work
+Parsing VHDL file "C:/arxitektonikh1/Issue_unit.vhd" into library work
+Parsing VHDL file "C:/arxitektonikh1/Issue_unit_test.vhd" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling package standard
 Compiling package std_logic_1164
-Compiling package std_logic_arith
-Compiling package std_logic_unsigned
-Compiling architecture behavioral of entity mux [mux_default]
-Compiling architecture behavioral of entity flipflop [flipflop_default]
-Compiling architecture behavioral of entity Reg1BitR [reg1bitr_default]
-Compiling architecture behavioral of entity Reg4BitR [reg4bitr_default]
-Compiling architecture structural of entity Reg32BitR [reg32bitr_default]
-Compiling architecture behavioral of entity Reg2BitR [reg2bitr_default]
-Compiling architecture behavioral of entity Reg5BitR [reg5bitr_default]
-Compiling architecture behavioral of entity arithmetic_unit [arithmetic_unit_default]
-Compiling architecture behavioral of entity FU_arithmetic_control [fu_arithmetic_control_default]
-Compiling architecture behavioral of entity FU_arithmetic [fu_arithmetic_default]
-Compiling architecture behavior of entity fu_aritmetic_test
+Compiling architecture structural of entity Issue_unit [issue_unit_default]
+Compiling architecture behavior of entity issue_unit_test
 Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
-Compiled 25 VHDL Units
-Built simulation executable C:/arxitektonikh1/FU_aritmetic_test_isim_beh.exe
-Fuse Memory Usage: 36320 KB
-Fuse CPU Usage: 717 ms
+Compiled 5 VHDL Units
+Built simulation executable C:/arxitektonikh1/Issue_unit_test_isim_beh.exe
+Fuse Memory Usage: 31812 KB
+Fuse CPU Usage: 561 ms

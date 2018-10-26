@@ -91,9 +91,7 @@
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="FU_arithmetic_usage.xml"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="FU_arithmetic_vhdl.prj"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="FU_arithmetic_xst.xrpt"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="FU_aritmetic_test_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="FU_aritmetic_test_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="FU_aritmetic_test_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="FU_aritmetic_test_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="FU_logical.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="FU_logical.lso"/>
@@ -108,6 +106,19 @@
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="FU_logical_test_isim_beh.exe"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="FU_logical_vhdl.prj"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="FU_logical_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="Issue_unit.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="Issue_unit.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="Issue_unit.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="Issue_unit.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Issue_unit.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="Issue_unit.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="Issue_unit.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="Issue_unit.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Issue_unit_test_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="Issue_unit_test_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="Issue_unit_test_isim_beh.wdb"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Issue_unit_vhdl.prj"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Issue_unit_xst.xrpt"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="Reg32BitR.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="Reg32BitR.lso"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="Reg32BitR.ngc"/>
@@ -129,7 +140,6 @@
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="mux4to1_5bit.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="mux4to1_5bit.lso"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="mux4to1_5bit.ngc"/>
@@ -156,7 +166,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1540396822" xil_pn:in_ck="7638715136823243565" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1540396822">
+    <transform xil_pn:end_ts="1540555968" xil_pn:in_ck="3934330986628800572" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1540555968">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="CDB_control.vhd"/>
@@ -167,6 +177,8 @@
       <outfile xil_pn:name="FU_logical.vhd"/>
       <outfile xil_pn:name="FU_logical_control.vhd"/>
       <outfile xil_pn:name="FU_logical_test.vhd"/>
+      <outfile xil_pn:name="Issue_unit.vhd"/>
+      <outfile xil_pn:name="Issue_unit_test.vhd"/>
       <outfile xil_pn:name="Reg1BitR.vhd"/>
       <outfile xil_pn:name="Reg2BitR.vhd"/>
       <outfile xil_pn:name="Reg32BitR.vhd"/>
@@ -186,19 +198,19 @@
       <outfile xil_pn:name="mux8to1_32Bit.vhd"/>
       <outfile xil_pn:name="test_CDBunit.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1540396710" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="8056809518204866961" xil_pn:start_ts="1540396710">
+    <transform xil_pn:end_ts="1540555897" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="7255446563450038397" xil_pn:start_ts="1540555897">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1540396710" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-260630603640100397" xil_pn:start_ts="1540396710">
+    <transform xil_pn:end_ts="1540555897" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="1530589508335944639" xil_pn:start_ts="1540555897">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1540396710" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="9161768185396626114" xil_pn:start_ts="1540396710">
+    <transform xil_pn:end_ts="1540555430" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="3246926297624411938" xil_pn:start_ts="1540555430">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1540396822" xil_pn:in_ck="7638715136823243565" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1540396822">
+    <transform xil_pn:end_ts="1540555968" xil_pn:in_ck="3934330986628800572" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1540555968">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="CDB_control.vhd"/>
@@ -209,6 +221,8 @@
       <outfile xil_pn:name="FU_logical.vhd"/>
       <outfile xil_pn:name="FU_logical_control.vhd"/>
       <outfile xil_pn:name="FU_logical_test.vhd"/>
+      <outfile xil_pn:name="Issue_unit.vhd"/>
+      <outfile xil_pn:name="Issue_unit_test.vhd"/>
       <outfile xil_pn:name="Reg1BitR.vhd"/>
       <outfile xil_pn:name="Reg2BitR.vhd"/>
       <outfile xil_pn:name="Reg32BitR.vhd"/>
@@ -228,71 +242,62 @@
       <outfile xil_pn:name="mux8to1_32Bit.vhd"/>
       <outfile xil_pn:name="test_CDBunit.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1540396827" xil_pn:in_ck="7638715136823243565" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4852928548172293820" xil_pn:start_ts="1540396822">
+    <transform xil_pn:end_ts="1540555972" xil_pn:in_ck="3934330986628800572" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-7827545458068340516" xil_pn:start_ts="1540555968">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="FU_aritmetic_test_beh.prj"/>
-      <outfile xil_pn:name="FU_aritmetic_test_isim_beh.exe"/>
+      <outfile xil_pn:name="Issue_unit_test_beh.prj"/>
+      <outfile xil_pn:name="Issue_unit_test_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
-      <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1540396827" xil_pn:in_ck="6538422445093873743" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-6145804664213722735" xil_pn:start_ts="1540396827">
+    <transform xil_pn:end_ts="1540555972" xil_pn:in_ck="2716508992094382661" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="5646126091500412393" xil_pn:start_ts="1540555972">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="FU_aritmetic_test_isim_beh.wdb"/>
+      <outfile xil_pn:name="Issue_unit_test_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
-      <outfile xil_pn:name="isim.log"/>
     </transform>
     <transform xil_pn:end_ts="1540304989" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1540304989">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1540394551" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-5229348232872119831" xil_pn:start_ts="1540394551">
+    <transform xil_pn:end_ts="1540555365" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="2204367274687623817" xil_pn:start_ts="1540555365">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1540394551" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="9161768185396626114" xil_pn:start_ts="1540394551">
+    <transform xil_pn:end_ts="1540555365" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="3246926297624411938" xil_pn:start_ts="1540555365">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1540394551" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1540394551">
+    <transform xil_pn:end_ts="1540555365" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1540555365">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1540394551" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-5326872704698956313" xil_pn:start_ts="1540394551">
+    <transform xil_pn:end_ts="1540555365" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-3130443886025156793" xil_pn:start_ts="1540555365">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1540394551" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="6080340526466663008" xil_pn:start_ts="1540394551">
+    <transform xil_pn:end_ts="1540555365" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="6080340526466663008" xil_pn:start_ts="1540555365">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1540394551" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="4580392067765561548" xil_pn:start_ts="1540394551">
+    <transform xil_pn:end_ts="1540555365" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-2197344204139261588" xil_pn:start_ts="1540555365">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1540396577" xil_pn:in_ck="-6486935551959969914" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="3034789651509154815" xil_pn:start_ts="1540396566">
+    <transform xil_pn:end_ts="1540555376" xil_pn:in_ck="833775290344349822" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="4869298541861465503" xil_pn:start_ts="1540555365">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name=".lso"/>
-      <outfile xil_pn:name="FU_arithmetic.lso"/>
-      <outfile xil_pn:name="FU_arithmetic.ngc"/>
-      <outfile xil_pn:name="FU_arithmetic.ngr"/>
-      <outfile xil_pn:name="FU_arithmetic.prj"/>
-      <outfile xil_pn:name="FU_arithmetic.stx"/>
-      <outfile xil_pn:name="FU_arithmetic.syr"/>
-      <outfile xil_pn:name="FU_arithmetic.xst"/>
-      <outfile xil_pn:name="FU_arithmetic_vhdl.prj"/>
-      <outfile xil_pn:name="FU_arithmetic_xst.xrpt"/>
-      <outfile xil_pn:name="Reg32BitR.ngr"/>
+      <outfile xil_pn:name="Issue_unit.lso"/>
+      <outfile xil_pn:name="Issue_unit.ngc"/>
+      <outfile xil_pn:name="Issue_unit.ngr"/>
+      <outfile xil_pn:name="Issue_unit.prj"/>
+      <outfile xil_pn:name="Issue_unit.stx"/>
+      <outfile xil_pn:name="Issue_unit.syr"/>
+      <outfile xil_pn:name="Issue_unit.xst"/>
+      <outfile xil_pn:name="Issue_unit_vhdl.prj"/>
+      <outfile xil_pn:name="Issue_unit_xst.xrpt"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
@@ -300,49 +305,7 @@
     <transform xil_pn:end_ts="1540397291" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-3523125988359139268" xil_pn:start_ts="1540397291">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1540397298" xil_pn:in_ck="-8144727533389922679" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-5790451146653615729" xil_pn:start_ts="1540397291">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="FU_arithmetic.bld"/>
-      <outfile xil_pn:name="FU_arithmetic.ngd"/>
-      <outfile xil_pn:name="FU_arithmetic_ngdbuild.xrpt"/>
-      <outfile xil_pn:name="_ngo"/>
-      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
-    </transform>
-    <transform xil_pn:end_ts="1540397304" xil_pn:in_ck="-4702542074400932197" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-7002665599540990466" xil_pn:start_ts="1540397298">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="FU_arithmetic.pcf"/>
-      <outfile xil_pn:name="FU_arithmetic_map.map"/>
-      <outfile xil_pn:name="FU_arithmetic_map.mrp"/>
-      <outfile xil_pn:name="FU_arithmetic_map.ncd"/>
-      <outfile xil_pn:name="FU_arithmetic_map.ngm"/>
-      <outfile xil_pn:name="FU_arithmetic_map.xrpt"/>
-      <outfile xil_pn:name="FU_arithmetic_summary.xml"/>
-      <outfile xil_pn:name="FU_arithmetic_usage.xml"/>
-      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
-    </transform>
-    <transform xil_pn:end_ts="1540397339" xil_pn:in_ck="-3200913187009739795" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-1229177303592316936" xil_pn:start_ts="1540397304">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="FU_arithmetic.ncd"/>
-      <outfile xil_pn:name="FU_arithmetic.pad"/>
-      <outfile xil_pn:name="FU_arithmetic.par"/>
-      <outfile xil_pn:name="FU_arithmetic.ptwx"/>
-      <outfile xil_pn:name="FU_arithmetic.unroutes"/>
-      <outfile xil_pn:name="FU_arithmetic.xpi"/>
-      <outfile xil_pn:name="FU_arithmetic_pad.csv"/>
-      <outfile xil_pn:name="FU_arithmetic_pad.txt"/>
-      <outfile xil_pn:name="FU_arithmetic_par.xrpt"/>
-      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
-    </transform>
-    <transform xil_pn:end_ts="1540397339" xil_pn:in_ck="1021098114550293779" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416187" xil_pn:start_ts="1540397335">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="FU_arithmetic.twr"/>
-      <outfile xil_pn:name="FU_arithmetic.twx"/>
-      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
   </transforms>
 

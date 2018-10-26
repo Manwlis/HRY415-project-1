@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "C:/arxitektonikh1/FU_aritmetic_test_isim_beh.exe" -prj "C:/arxitektonikh1/FU_aritmetic_test_beh.prj" "work.FU_aritmetic_test" 
+-intstyle "ise" -incremental -o "C:/arxitektonikh1/Issue_unit_test_isim_beh.exe" -prj "C:/arxitektonikh1/Issue_unit_test_beh.prj" "work.Issue_unit_test" 
