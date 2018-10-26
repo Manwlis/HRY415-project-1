@@ -18,7 +18,7 @@ entity Issue_unit is
            Rk : out  STD_LOGIC_VECTOR (4 downto 0));
 end Issue_unit;
 
-architecture Structural of Issue_unit is
+architecture Behavioral of Issue_unit is
 
 begin
 
@@ -54,12 +54,12 @@ begin
 				issueRS <= "000";			
 			end if;
 		-- den hr8e entolh
-		else 
+		else
 			accepted <= '0';
 			Instr_valid <= '0';
 			issueRS <= "000";		
 		end if;
 	end process;
 	
-end Structural;
+end Behavioral;
 

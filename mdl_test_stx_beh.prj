@@ -1,0 +1,4 @@
+vhdl isim_temp "mux_pachage.vhd"
+vhdl isim_temp "mux_generic.vhd"
+vhdl isim_temp "mdl.vhd"
+vhdl isim_temp "mdl_test.vhd"

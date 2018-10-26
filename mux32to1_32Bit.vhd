@@ -125,9 +125,4 @@ port map(
  sel => sel(4),
  Outt => output);
  
- 
-
-
-
 end Behavioral;
-

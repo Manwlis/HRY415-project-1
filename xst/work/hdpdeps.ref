@@ -1,4 +1,4 @@
-V3 76
+V3 86
 FL C:/arxitektonikh1/arithmetic_unit.vhd 2018/10/24.17:57:26 O.87xd
 EN work/arithmetic_unit 1540396583 FL C:/arxitektonikh1/arithmetic_unit.vhd \
       PB ieee/std_logic_1164 1325952872 PB ieee/STD_LOGIC_UNSIGNED 1325952875
@@ -53,6 +53,11 @@ EN work/logical_unit 1540388393 FL C:/arxitektonikh1/logical_unit.vhd \
       PB ieee/std_logic_1164 1325952872
 AR work/logical_unit/Behavioral 1540388394 \
       FL C:/arxitektonikh1/logical_unit.vhd EN work/logical_unit 1540388393
+FL C:/arxitektonikh1/mdl.vhd 2018/10/26.17:33:08 O.87xd
+EN work/mdl 1540564724 FL C:/arxitektonikh1/mdl.vhd PB ieee/std_logic_1164 1325952872 \
+      PB ieee/NUMERIC_STD 1325952877
+AR work/mdl/syn 1540564725 \
+      FL C:/arxitektonikh1/mdl.vhd EN work/mdl 1540564724 CP work/mux_generic
 FL C:/arxitektonikh1/mux.vhd 2018/10/24.18:22:27 O.87xd
 EN work/mux 1540396569 FL C:/arxitektonikh1/mux.vhd PB ieee/std_logic_1164 1325952872
 AR work/mux/Behavioral 1540396570 \
@@ -78,6 +83,16 @@ FL C:/arxitektonikh1/mux5Bit.vhd 2018/10/23.17:08:48 O.87xd
 EN work/mux5Bit 1540377885 FL C:/arxitektonikh1/mux5Bit.vhd PB ieee/std_logic_1164 1325952872
 AR work/mux5Bit/Behavioral 1540377886 \
       FL C:/arxitektonikh1/mux5Bit.vhd EN work/mux5Bit 1540377885 CP mux
+FL C:/arxitektonikh1/mux_generic.vhd 2018/10/26.17:19:22 O.87xd
+EN work/mux_generic 1540564722 FL C:/arxitektonikh1/mux_generic.vhd \
+      PB ieee/std_logic_1164 1325952872 PB work/mux_p 1540564721
+AR work/mux_generic/Behavioral 1540564723 \
+      FL C:/arxitektonikh1/mux_generic.vhd EN work/mux_generic 1540564722
+FL C:/arxitektonikh1/mux_pachage.vhd 2018/10/26.17:19:07 O.87xd
+PH work/mux_p 1540564720 FL C:/arxitektonikh1/mux_pachage.vhd \
+      PB ieee/std_logic_1164 1325952872
+PB work/mux_p 1540564721 \
+      FL C:/arxitektonikh1/mux_pachage.vhd PH work/mux_p 1540564720
 FL C:/arxitektonikh1/Reg1BitR.vhd 2018/10/24.18:55:33 O.87xd
 EN work/Reg1BitR 1540396573 FL C:/arxitektonikh1/Reg1BitR.vhd \
       PB ieee/std_logic_1164 1325952872

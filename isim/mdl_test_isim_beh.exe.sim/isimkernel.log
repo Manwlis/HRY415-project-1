@@ -1,0 +1,31 @@
+Command line:
+   mdl_test_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  50348
+
+Fri Oct 26 17:38:03 2018
+
+
+ Elaboration Time: 0.0156 sec
+
+ Current Memory Usage: 505.389 Meg
+
+ Total Signals          : 14
+ Total Nets             : 131
+ Total Signal Drivers   : 6
+ Total Blocks           : 6
+ Total Primitive Blocks : 4
+ Total Processes        : 3
+ Total Traceable Variables  : 14
+ Total Scalar Nets and Variables : 615
+Total Line Count : 22
+In process mux_generic.vhd:16 
+ 
+
+ Total Simulation Time: 0.0156 sec
+
+ Current Memory Usage: 505.389 Meg
+
+Fri Oct 26 17:38:32 2018
+

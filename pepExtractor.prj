@@ -1,1 +1,3 @@
-work	"Issue_unit.vhd"
+work	"mdl.vhd"
+work	"mux_generic.vhd"
+work	"mux_pachage.vhd"
