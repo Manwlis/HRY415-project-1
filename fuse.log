@@ -1,23 +1,64 @@
-Running: E:\Xilinx\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/arxitektonikh1/mdl_test_isim_beh.exe -prj C:/arxitektonikh1/mdl_test_beh.prj work.mdl_test 
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -o "C:/arxitektonikh1/test_RF_isim_beh.exe" -prj "C:/arxitektonikh1/test_RF_beh.prj" "work.test_RF" 
 ISim O.87xd (signature 0xc3576ebc)
 Number of CPUs detected in this system: 16
 Turning on mult-threading, number of parallel sub-compilation jobs: 32 
 Determining compilation order of HDL files
-Parsing VHDL file "C:/arxitektonikh1/mux_pachage.vhd" into library work
-Parsing VHDL file "C:/arxitektonikh1/mux_generic.vhd" into library work
-Parsing VHDL file "C:/arxitektonikh1/mdl.vhd" into library work
-Parsing VHDL file "C:/arxitektonikh1/mdl_test.vhd" into library work
+Parsing VHDL file "C:/arxitektonikh1/mux.vhd" into library work
+Parsing VHDL file "C:/arxitektonikh1/mux5Bit.vhd" into library work
+Parsing VHDL file "C:/arxitektonikh1/mux32Bit.vhd" into library work
+Parsing VHDL file "C:/arxitektonikh1/demux1bit.vhd" into library work
+Parsing VHDL file "C:/arxitektonikh1/mux4to1_5bit.vhd" into library work
+Parsing VHDL file "C:/arxitektonikh1/mux4to1_32Bit.vhd" into library work
+Parsing VHDL file "C:/arxitektonikh1/flipflop.vhd" into library work
+Parsing VHDL file "C:/arxitektonikh1/demux2to4.vhd" into library work
+Parsing VHDL file "C:/arxitektonikh1/Reg1BitR.vhd" into library work
+Parsing VHDL file "C:/arxitektonikh1/mux8to1_5Bit.vhd" into library work
+Parsing VHDL file "C:/arxitektonikh1/mux8to1_32Bit.vhd" into library work
+Parsing VHDL file "C:/arxitektonikh1/demux3to8.vhd" into library work
+Parsing VHDL file "C:/arxitektonikh1/Reg4BitR.vhd" into library work
+Parsing VHDL file "C:/arxitektonikh1/mux16to1_5bit.vhd" into library work
+Parsing VHDL file "C:/arxitektonikh1/mux16to1_32Bit.vhd" into library work
+Parsing VHDL file "C:/arxitektonikh1/demux4to16.vhd" into library work
+Parsing VHDL file "C:/arxitektonikh1/Reg5BitR.vhd" into library work
+Parsing VHDL file "C:/arxitektonikh1/Reg32BitR.vhd" into library work
+Parsing VHDL file "C:/arxitektonikh1/mux32to1_5Bit.vhd" into library work
+Parsing VHDL file "C:/arxitektonikh1/mux32to1_32Bit.vhd" into library work
+Parsing VHDL file "C:/arxitektonikh1/demux5to32.vhd" into library work
+Parsing VHDL file "C:/arxitektonikh1/V_block.vhd" into library work
+Parsing VHDL file "C:/arxitektonikh1/Q_block.vhd" into library work
+Parsing VHDL file "C:/arxitektonikh1/Register_File.vhd" into library work
+Parsing VHDL file "C:/arxitektonikh1/test_RF.vhd" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling package standard
 Compiling package std_logic_1164
-Compiling package numeric_std
-Compiling package mux_p
-Compiling architecture behavioral of entity mux_generic [\mux_generic(3)\]
-Compiling architecture syn of entity mdl [mdl_default]
-Compiling architecture behavior of entity mdl_test
+Compiling architecture behavioral of entity mux [mux_default]
+Compiling architecture behavioral of entity mux5Bit [mux5bit_default]
+Compiling architecture behavioral of entity flipflop [flipflop_default]
+Compiling architecture behavioral of entity Reg1BitR [reg1bitr_default]
+Compiling architecture behavioral of entity Reg5BitR [reg5bitr_default]
+Compiling architecture behavioral of entity demux [demux_default]
+Compiling architecture behavioral of entity demux2to4 [demux2to4_default]
+Compiling architecture behavioral of entity demux3to8 [demux3to8_default]
+Compiling architecture behavioral of entity demux4to16 [demux4to16_default]
+Compiling architecture structural of entity demux5to32 [demux5to32_default]
+Compiling architecture behavioral of entity mux4to1_5bit [mux4to1_5bit_default]
+Compiling architecture behavioral of entity mux8to1_5Bit [mux8to1_5bit_default]
+Compiling architecture behavioral of entity mux16to1_5bit [mux16to1_5bit_default]
+Compiling architecture structural of entity mux32to1_5Bit [mux32to1_5bit_default]
+Compiling architecture behavioral of entity Q_block [q_block_default]
+Compiling architecture behavioral of entity Reg4BitR [reg4bitr_default]
+Compiling architecture structural of entity Reg32BitR [reg32bitr_default]
+Compiling architecture behavioral of entity mux32Bit [mux32bit_default]
+Compiling architecture behavioral of entity mux4to1_32Bit [mux4to1_32bit_default]
+Compiling architecture behavioral of entity mux8to1_32Bit [mux8to1_32bit_default]
+Compiling architecture behavioral of entity mux16to1_32Bit [mux16to1_32bit_default]
+Compiling architecture behavioral of entity mux32to1_32Bit [mux32to1_32bit_default]
+Compiling architecture behavioral of entity V_block [v_block_default]
+Compiling architecture behavioral of entity Register_File [register_file_default]
+Compiling architecture behavior of entity test_rf
 Time Resolution for simulation is 1ps.
-Compiled 9 VHDL Units
-Built simulation executable C:/arxitektonikh1/mdl_test_isim_beh.exe
-Fuse Memory Usage: 38048 KB
-Fuse CPU Usage: 670 ms
+Compiled 51 VHDL Units
+Built simulation executable C:/arxitektonikh1/test_RF_isim_beh.exe
+Fuse Memory Usage: 36604 KB
+Fuse CPU Usage: 904 ms

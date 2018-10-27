@@ -1,0 +1,875 @@
+Release 13.4 - xst O.87xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: Register_File.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Register_File.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Register_File"
+Output Format                      : NGC
+Target Device                      : xc3s1600e-5-fg320
+
+---- Source Options
+Top Module Name                    : Register_File
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/arxitektonikh1/mux.vhd" in Library work.
+Architecture behavioral of Entity mux is up to date.
+Compiling vhdl file "C:/arxitektonikh1/mux32Bit.vhd" in Library work.
+Architecture behavioral of Entity mux32bit is up to date.
+Compiling vhdl file "C:/arxitektonikh1/mux5Bit.vhd" in Library work.
+Architecture behavioral of Entity mux5bit is up to date.
+Compiling vhdl file "C:/arxitektonikh1/demux1bit.vhd" in Library work.
+Architecture behavioral of Entity demux is up to date.
+Compiling vhdl file "C:/arxitektonikh1/mux4to1_32Bit.vhd" in Library work.
+Architecture behavioral of Entity mux4to1_32bit is up to date.
+Compiling vhdl file "C:/arxitektonikh1/flipflop.vhd" in Library work.
+Architecture behavioral of Entity flipflop is up to date.
+Compiling vhdl file "C:/arxitektonikh1/mux4to1_5bit.vhd" in Library work.
+Architecture behavioral of Entity mux4to1_5bit is up to date.
+Compiling vhdl file "C:/arxitektonikh1/demux2to4.vhd" in Library work.
+Architecture behavioral of Entity demux2to4 is up to date.
+Compiling vhdl file "C:/arxitektonikh1/mux8to1_32Bit.vhd" in Library work.
+Architecture behavioral of Entity mux8to1_32bit is up to date.
+Compiling vhdl file "C:/arxitektonikh1/Reg1BitR.vhd" in Library work.
+Entity <reg1bitr> compiled.
+Entity <reg1bitr> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/arxitektonikh1/mux8to1_5Bit.vhd" in Library work.
+Architecture behavioral of Entity mux8to1_5bit is up to date.
+Compiling vhdl file "C:/arxitektonikh1/demux3to8.vhd" in Library work.
+Architecture behavioral of Entity demux3to8 is up to date.
+Compiling vhdl file "C:/arxitektonikh1/mux16to1_32Bit.vhd" in Library work.
+Architecture behavioral of Entity mux16to1_32bit is up to date.
+Compiling vhdl file "C:/arxitektonikh1/Reg4BitR.vhd" in Library work.
+Architecture behavioral of Entity reg4bitr is up to date.
+Compiling vhdl file "C:/arxitektonikh1/mux16to1_5bit.vhd" in Library work.
+Architecture behavioral of Entity mux16to1_5bit is up to date.
+Compiling vhdl file "C:/arxitektonikh1/demux4to16.vhd" in Library work.
+Architecture behavioral of Entity demux4to16 is up to date.
+Compiling vhdl file "C:/arxitektonikh1/Reg32BitR.vhd" in Library work.
+Architecture structural of Entity reg32bitr is up to date.
+Compiling vhdl file "C:/arxitektonikh1/mux32to1_32Bit.vhd" in Library work.
+Architecture behavioral of Entity mux32to1_32bit is up to date.
+Compiling vhdl file "C:/arxitektonikh1/Reg5BitR.vhd" in Library work.
+Entity <reg5bitr> compiled.
+Entity <reg5bitr> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/arxitektonikh1/demux5to32.vhd" in Library work.
+Architecture structural of Entity demux5to32 is up to date.
+Compiling vhdl file "C:/arxitektonikh1/mux32to1_5Bit.vhd" in Library work.
+Architecture structural of Entity mux32to1_5bit is up to date.
+Compiling vhdl file "C:/arxitektonikh1/Q_block.vhd" in Library work.
+Entity <q_block> compiled.
+Entity <q_block> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/arxitektonikh1/V_block.vhd" in Library work.
+Architecture behavioral of Entity v_block is up to date.
+Compiling vhdl file "C:/arxitektonikh1/Register_File.vhd" in Library work.
+Entity <Register_File> compiled.
+Entity <Register_File> (Architecture <Behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Register_File> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <Q_block> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <V_block> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <mux5Bit> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Reg5BitR> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <demux5to32> in library <work> (architecture <structural>).
+
+Analyzing hierarchy for entity <mux32to1_5Bit> in library <work> (architecture <structural>).
+
+Analyzing hierarchy for entity <Reg32BitR> in library <work> (architecture <structural>).
+
+Analyzing hierarchy for entity <mux32Bit> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <mux32to1_32Bit> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <mux> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Reg1BitR> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <demux> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <demux4to16> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <mux16to1_5Bit> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <mux5Bit> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Reg4BitR> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <mux16to1_32Bit> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <mux32Bit> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <mux> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <flipflop> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <demux> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <demux3to8> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <mux8to1_5Bit> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <mux5Bit> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Reg1BitR> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <mux8to1_32Bit> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <demux> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <demux2to4> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <mux4to1_5Bit> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <mux5Bit> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <mux> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <flipflop> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <mux4to1_32Bit> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <mux32Bit> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <demux> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <mux5Bit> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <mux5Bit> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <mux5Bit> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <mux> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <Register_File> in library <work> (Architecture <Behavioral>).
+Entity <Register_File> analyzed. Unit <Register_File> generated.
+
+Analyzing Entity <Q_block> in library <work> (Architecture <behavioral>).
+Entity <Q_block> analyzed. Unit <Q_block> generated.
+
+Analyzing Entity <mux5Bit> in library <work> (Architecture <behavioral>).
+Entity <mux5Bit> analyzed. Unit <mux5Bit> generated.
+
+Analyzing Entity <mux> in library <work> (Architecture <behavioral>).
+Entity <mux> analyzed. Unit <mux> generated.
+
+Analyzing Entity <Reg5BitR> in library <work> (Architecture <behavioral>).
+Entity <Reg5BitR> analyzed. Unit <Reg5BitR> generated.
+
+Analyzing Entity <Reg1BitR> in library <work> (Architecture <behavioral>).
+Entity <Reg1BitR> analyzed. Unit <Reg1BitR> generated.
+
+Analyzing Entity <flipflop> in library <work> (Architecture <behavioral>).
+Entity <flipflop> analyzed. Unit <flipflop> generated.
+
+Analyzing Entity <demux5to32> in library <work> (Architecture <structural>).
+Entity <demux5to32> analyzed. Unit <demux5to32> generated.
+
+Analyzing Entity <demux> in library <work> (Architecture <behavioral>).
+Entity <demux> analyzed. Unit <demux> generated.
+
+Analyzing Entity <demux4to16> in library <work> (Architecture <behavioral>).
+Entity <demux4to16> analyzed. Unit <demux4to16> generated.
+
+Analyzing Entity <demux3to8> in library <work> (Architecture <behavioral>).
+Entity <demux3to8> analyzed. Unit <demux3to8> generated.
+
+Analyzing Entity <demux2to4> in library <work> (Architecture <behavioral>).
+Entity <demux2to4> analyzed. Unit <demux2to4> generated.
+
+Analyzing Entity <mux32to1_5Bit> in library <work> (Architecture <structural>).
+Entity <mux32to1_5Bit> analyzed. Unit <mux32to1_5Bit> generated.
+
+Analyzing Entity <mux16to1_5Bit> in library <work> (Architecture <behavioral>).
+Entity <mux16to1_5Bit> analyzed. Unit <mux16to1_5Bit> generated.
+
+Analyzing Entity <mux8to1_5Bit> in library <work> (Architecture <behavioral>).
+Entity <mux8to1_5Bit> analyzed. Unit <mux8to1_5Bit> generated.
+
+Analyzing Entity <mux4to1_5Bit> in library <work> (Architecture <behavioral>).
+Entity <mux4to1_5Bit> analyzed. Unit <mux4to1_5Bit> generated.
+
+Analyzing Entity <V_block> in library <work> (Architecture <behavioral>).
+Entity <V_block> analyzed. Unit <V_block> generated.
+
+Analyzing Entity <Reg32BitR> in library <work> (Architecture <structural>).
+Entity <Reg32BitR> analyzed. Unit <Reg32BitR> generated.
+
+Analyzing Entity <Reg4BitR> in library <work> (Architecture <behavioral>).
+Entity <Reg4BitR> analyzed. Unit <Reg4BitR> generated.
+
+Analyzing Entity <mux32Bit> in library <work> (Architecture <behavioral>).
+Entity <mux32Bit> analyzed. Unit <mux32Bit> generated.
+
+Analyzing Entity <mux32to1_32Bit> in library <work> (Architecture <behavioral>).
+Entity <mux32to1_32Bit> analyzed. Unit <mux32to1_32Bit> generated.
+
+Analyzing Entity <mux16to1_32Bit> in library <work> (Architecture <behavioral>).
+Entity <mux16to1_32Bit> analyzed. Unit <mux16to1_32Bit> generated.
+
+Analyzing Entity <mux8to1_32Bit> in library <work> (Architecture <behavioral>).
+Entity <mux8to1_32Bit> analyzed. Unit <mux8to1_32Bit> generated.
+
+Analyzing Entity <mux4to1_32Bit> in library <work> (Architecture <behavioral>).
+Entity <mux4to1_32Bit> analyzed. Unit <mux4to1_32Bit> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <mux>.
+    Related source file is "C:/arxitektonikh1/mux.vhd".
+Unit <mux> synthesized.
+
+
+Synthesizing Unit <flipflop>.
+    Related source file is "C:/arxitektonikh1/flipflop.vhd".
+    Found 1-bit register for signal <q>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <flipflop> synthesized.
+
+
+Synthesizing Unit <demux>.
+    Related source file is "C:/arxitektonikh1/demux1bit.vhd".
+Unit <demux> synthesized.
+
+
+Synthesizing Unit <mux5Bit>.
+    Related source file is "C:/arxitektonikh1/mux5Bit.vhd".
+Unit <mux5Bit> synthesized.
+
+
+Synthesizing Unit <Reg1BitR>.
+    Related source file is "C:/arxitektonikh1/Reg1BitR.vhd".
+Unit <Reg1BitR> synthesized.
+
+
+Synthesizing Unit <demux2to4>.
+    Related source file is "C:/arxitektonikh1/demux2to4.vhd".
+Unit <demux2to4> synthesized.
+
+
+Synthesizing Unit <mux32Bit>.
+    Related source file is "C:/arxitektonikh1/mux32Bit.vhd".
+Unit <mux32Bit> synthesized.
+
+
+Synthesizing Unit <Reg5BitR>.
+    Related source file is "C:/arxitektonikh1/Reg5BitR.vhd".
+Unit <Reg5BitR> synthesized.
+
+
+Synthesizing Unit <demux3to8>.
+    Related source file is "C:/arxitektonikh1/demux3to8.vhd".
+Unit <demux3to8> synthesized.
+
+
+Synthesizing Unit <mux4to1_5Bit>.
+    Related source file is "C:/arxitektonikh1/mux4to1_5bit.vhd".
+Unit <mux4to1_5Bit> synthesized.
+
+
+Synthesizing Unit <Reg4BitR>.
+    Related source file is "C:/arxitektonikh1/Reg4BitR.vhd".
+Unit <Reg4BitR> synthesized.
+
+
+Synthesizing Unit <mux4to1_32Bit>.
+    Related source file is "C:/arxitektonikh1/mux4to1_32Bit.vhd".
+Unit <mux4to1_32Bit> synthesized.
+
+
+Synthesizing Unit <demux4to16>.
+    Related source file is "C:/arxitektonikh1/demux4to16.vhd".
+Unit <demux4to16> synthesized.
+
+
+Synthesizing Unit <mux8to1_5Bit>.
+    Related source file is "C:/arxitektonikh1/mux8to1_5Bit.vhd".
+Unit <mux8to1_5Bit> synthesized.
+
+
+Synthesizing Unit <Reg32BitR>.
+    Related source file is "C:/arxitektonikh1/Reg32BitR.vhd".
+Unit <Reg32BitR> synthesized.
+
+
+Synthesizing Unit <mux8to1_32Bit>.
+    Related source file is "C:/arxitektonikh1/mux8to1_32Bit.vhd".
+Unit <mux8to1_32Bit> synthesized.
+
+
+Synthesizing Unit <demux5to32>.
+    Related source file is "C:/arxitektonikh1/demux5to32.vhd".
+Unit <demux5to32> synthesized.
+
+
+Synthesizing Unit <mux16to1_5Bit>.
+    Related source file is "C:/arxitektonikh1/mux16to1_5bit.vhd".
+Unit <mux16to1_5Bit> synthesized.
+
+
+Synthesizing Unit <mux16to1_32Bit>.
+    Related source file is "C:/arxitektonikh1/mux16to1_32Bit.vhd".
+Unit <mux16to1_32Bit> synthesized.
+
+
+Synthesizing Unit <mux32to1_5Bit>.
+    Related source file is "C:/arxitektonikh1/mux32to1_5Bit.vhd".
+Unit <mux32to1_5Bit> synthesized.
+
+
+Synthesizing Unit <mux32to1_32Bit>.
+    Related source file is "C:/arxitektonikh1/mux32to1_32Bit.vhd".
+Unit <mux32to1_32Bit> synthesized.
+
+
+Synthesizing Unit <Q_block>.
+    Related source file is "C:/arxitektonikh1/Q_block.vhd".
+    Found 1-bit xor2 for signal <comp_out_0$xor0000>.
+    Found 1-bit xor2 for signal <comp_out_0$xor0001>.
+    Found 1-bit xor2 for signal <comp_out_0$xor0002>.
+    Found 1-bit xor2 for signal <comp_out_0$xor0003>.
+    Found 1-bit xor2 for signal <comp_out_0$xor0004>.
+    Found 1-bit xor2 for signal <comp_out_1$xor0000>.
+    Found 1-bit xor2 for signal <comp_out_1$xor0001>.
+    Found 1-bit xor2 for signal <comp_out_1$xor0002>.
+    Found 1-bit xor2 for signal <comp_out_1$xor0003>.
+    Found 1-bit xor2 for signal <comp_out_1$xor0004>.
+    Found 1-bit xor2 for signal <comp_out_10$xor0000>.
+    Found 1-bit xor2 for signal <comp_out_10$xor0001>.
+    Found 1-bit xor2 for signal <comp_out_10$xor0002>.
+    Found 1-bit xor2 for signal <comp_out_10$xor0003>.
+    Found 1-bit xor2 for signal <comp_out_10$xor0004>.
+    Found 1-bit xor2 for signal <comp_out_11$xor0000>.
+    Found 1-bit xor2 for signal <comp_out_11$xor0001>.
+    Found 1-bit xor2 for signal <comp_out_11$xor0002>.
+    Found 1-bit xor2 for signal <comp_out_11$xor0003>.
+    Found 1-bit xor2 for signal <comp_out_11$xor0004>.
+    Found 1-bit xor2 for signal <comp_out_12$xor0000>.
+    Found 1-bit xor2 for signal <comp_out_12$xor0001>.
+    Found 1-bit xor2 for signal <comp_out_12$xor0002>.
+    Found 1-bit xor2 for signal <comp_out_12$xor0003>.
+    Found 1-bit xor2 for signal <comp_out_12$xor0004>.
+    Found 1-bit xor2 for signal <comp_out_13$xor0000>.
+    Found 1-bit xor2 for signal <comp_out_13$xor0001>.
+    Found 1-bit xor2 for signal <comp_out_13$xor0002>.
+    Found 1-bit xor2 for signal <comp_out_13$xor0003>.
+    Found 1-bit xor2 for signal <comp_out_13$xor0004>.
+    Found 1-bit xor2 for signal <comp_out_14$xor0000>.
+    Found 1-bit xor2 for signal <comp_out_14$xor0001>.
+    Found 1-bit xor2 for signal <comp_out_14$xor0002>.
+    Found 1-bit xor2 for signal <comp_out_14$xor0003>.
+    Found 1-bit xor2 for signal <comp_out_14$xor0004>.
+    Found 1-bit xor2 for signal <comp_out_15$xor0000>.
+    Found 1-bit xor2 for signal <comp_out_15$xor0001>.
+    Found 1-bit xor2 for signal <comp_out_15$xor0002>.
+    Found 1-bit xor2 for signal <comp_out_15$xor0003>.
+    Found 1-bit xor2 for signal <comp_out_15$xor0004>.
+    Found 1-bit xor2 for signal <comp_out_16$xor0000>.
+    Found 1-bit xor2 for signal <comp_out_16$xor0001>.
+    Found 1-bit xor2 for signal <comp_out_16$xor0002>.
+    Found 1-bit xor2 for signal <comp_out_16$xor0003>.
+    Found 1-bit xor2 for signal <comp_out_16$xor0004>.
+    Found 1-bit xor2 for signal <comp_out_17$xor0000>.
+    Found 1-bit xor2 for signal <comp_out_17$xor0001>.
+    Found 1-bit xor2 for signal <comp_out_17$xor0002>.
+    Found 1-bit xor2 for signal <comp_out_17$xor0003>.
+    Found 1-bit xor2 for signal <comp_out_17$xor0004>.
+    Found 1-bit xor2 for signal <comp_out_18$xor0000>.
+    Found 1-bit xor2 for signal <comp_out_18$xor0001>.
+    Found 1-bit xor2 for signal <comp_out_18$xor0002>.
+    Found 1-bit xor2 for signal <comp_out_18$xor0003>.
+    Found 1-bit xor2 for signal <comp_out_18$xor0004>.
+    Found 1-bit xor2 for signal <comp_out_19$xor0000>.
+    Found 1-bit xor2 for signal <comp_out_19$xor0001>.
+    Found 1-bit xor2 for signal <comp_out_19$xor0002>.
+    Found 1-bit xor2 for signal <comp_out_19$xor0003>.
+    Found 1-bit xor2 for signal <comp_out_19$xor0004>.
+    Found 1-bit xor2 for signal <comp_out_2$xor0000>.
+    Found 1-bit xor2 for signal <comp_out_2$xor0001>.
+    Found 1-bit xor2 for signal <comp_out_2$xor0002>.
+    Found 1-bit xor2 for signal <comp_out_2$xor0003>.
+    Found 1-bit xor2 for signal <comp_out_2$xor0004>.
+    Found 1-bit xor2 for signal <comp_out_20$xor0000>.
+    Found 1-bit xor2 for signal <comp_out_20$xor0001>.
+    Found 1-bit xor2 for signal <comp_out_20$xor0002>.
+    Found 1-bit xor2 for signal <comp_out_20$xor0003>.
+    Found 1-bit xor2 for signal <comp_out_20$xor0004>.
+    Found 1-bit xor2 for signal <comp_out_21$xor0000>.
+    Found 1-bit xor2 for signal <comp_out_21$xor0001>.
+    Found 1-bit xor2 for signal <comp_out_21$xor0002>.
+    Found 1-bit xor2 for signal <comp_out_21$xor0003>.
+    Found 1-bit xor2 for signal <comp_out_21$xor0004>.
+    Found 1-bit xor2 for signal <comp_out_22$xor0000>.
+    Found 1-bit xor2 for signal <comp_out_22$xor0001>.
+    Found 1-bit xor2 for signal <comp_out_22$xor0002>.
+    Found 1-bit xor2 for signal <comp_out_22$xor0003>.
+    Found 1-bit xor2 for signal <comp_out_22$xor0004>.
+    Found 1-bit xor2 for signal <comp_out_23$xor0000>.
+    Found 1-bit xor2 for signal <comp_out_23$xor0001>.
+    Found 1-bit xor2 for signal <comp_out_23$xor0002>.
+    Found 1-bit xor2 for signal <comp_out_23$xor0003>.
+    Found 1-bit xor2 for signal <comp_out_23$xor0004>.
+    Found 1-bit xor2 for signal <comp_out_24$xor0000>.
+    Found 1-bit xor2 for signal <comp_out_24$xor0001>.
+    Found 1-bit xor2 for signal <comp_out_24$xor0002>.
+    Found 1-bit xor2 for signal <comp_out_24$xor0003>.
+    Found 1-bit xor2 for signal <comp_out_24$xor0004>.
+    Found 1-bit xor2 for signal <comp_out_25$xor0000>.
+    Found 1-bit xor2 for signal <comp_out_25$xor0001>.
+    Found 1-bit xor2 for signal <comp_out_25$xor0002>.
+    Found 1-bit xor2 for signal <comp_out_25$xor0003>.
+    Found 1-bit xor2 for signal <comp_out_25$xor0004>.
+    Found 1-bit xor2 for signal <comp_out_26$xor0000>.
+    Found 1-bit xor2 for signal <comp_out_26$xor0001>.
+    Found 1-bit xor2 for signal <comp_out_26$xor0002>.
+    Found 1-bit xor2 for signal <comp_out_26$xor0003>.
+    Found 1-bit xor2 for signal <comp_out_26$xor0004>.
+    Found 1-bit xor2 for signal <comp_out_27$xor0000>.
+    Found 1-bit xor2 for signal <comp_out_27$xor0001>.
+    Found 1-bit xor2 for signal <comp_out_27$xor0002>.
+    Found 1-bit xor2 for signal <comp_out_27$xor0003>.
+    Found 1-bit xor2 for signal <comp_out_27$xor0004>.
+    Found 1-bit xor2 for signal <comp_out_28$xor0000>.
+    Found 1-bit xor2 for signal <comp_out_28$xor0001>.
+    Found 1-bit xor2 for signal <comp_out_28$xor0002>.
+    Found 1-bit xor2 for signal <comp_out_28$xor0003>.
+    Found 1-bit xor2 for signal <comp_out_28$xor0004>.
+    Found 1-bit xor2 for signal <comp_out_29$xor0000>.
+    Found 1-bit xor2 for signal <comp_out_29$xor0001>.
+    Found 1-bit xor2 for signal <comp_out_29$xor0002>.
+    Found 1-bit xor2 for signal <comp_out_29$xor0003>.
+    Found 1-bit xor2 for signal <comp_out_29$xor0004>.
+    Found 1-bit xor2 for signal <comp_out_3$xor0000>.
+    Found 1-bit xor2 for signal <comp_out_3$xor0001>.
+    Found 1-bit xor2 for signal <comp_out_3$xor0002>.
+    Found 1-bit xor2 for signal <comp_out_3$xor0003>.
+    Found 1-bit xor2 for signal <comp_out_3$xor0004>.
+    Found 1-bit xor2 for signal <comp_out_30$xor0000>.
+    Found 1-bit xor2 for signal <comp_out_30$xor0001>.
+    Found 1-bit xor2 for signal <comp_out_30$xor0002>.
+    Found 1-bit xor2 for signal <comp_out_30$xor0003>.
+    Found 1-bit xor2 for signal <comp_out_30$xor0004>.
+    Found 1-bit xor2 for signal <comp_out_31$xor0000>.
+    Found 1-bit xor2 for signal <comp_out_31$xor0001>.
+    Found 1-bit xor2 for signal <comp_out_31$xor0002>.
+    Found 1-bit xor2 for signal <comp_out_31$xor0003>.
+    Found 1-bit xor2 for signal <comp_out_31$xor0004>.
+    Found 1-bit xor2 for signal <comp_out_4$xor0000>.
+    Found 1-bit xor2 for signal <comp_out_4$xor0001>.
+    Found 1-bit xor2 for signal <comp_out_4$xor0002>.
+    Found 1-bit xor2 for signal <comp_out_4$xor0003>.
+    Found 1-bit xor2 for signal <comp_out_4$xor0004>.
+    Found 1-bit xor2 for signal <comp_out_5$xor0000>.
+    Found 1-bit xor2 for signal <comp_out_5$xor0001>.
+    Found 1-bit xor2 for signal <comp_out_5$xor0002>.
+    Found 1-bit xor2 for signal <comp_out_5$xor0003>.
+    Found 1-bit xor2 for signal <comp_out_5$xor0004>.
+    Found 1-bit xor2 for signal <comp_out_6$xor0000>.
+    Found 1-bit xor2 for signal <comp_out_6$xor0001>.
+    Found 1-bit xor2 for signal <comp_out_6$xor0002>.
+    Found 1-bit xor2 for signal <comp_out_6$xor0003>.
+    Found 1-bit xor2 for signal <comp_out_6$xor0004>.
+    Found 1-bit xor2 for signal <comp_out_7$xor0000>.
+    Found 1-bit xor2 for signal <comp_out_7$xor0001>.
+    Found 1-bit xor2 for signal <comp_out_7$xor0002>.
+    Found 1-bit xor2 for signal <comp_out_7$xor0003>.
+    Found 1-bit xor2 for signal <comp_out_7$xor0004>.
+    Found 1-bit xor2 for signal <comp_out_8$xor0000>.
+    Found 1-bit xor2 for signal <comp_out_8$xor0001>.
+    Found 1-bit xor2 for signal <comp_out_8$xor0002>.
+    Found 1-bit xor2 for signal <comp_out_8$xor0003>.
+    Found 1-bit xor2 for signal <comp_out_8$xor0004>.
+    Found 1-bit xor2 for signal <comp_out_9$xor0000>.
+    Found 1-bit xor2 for signal <comp_out_9$xor0001>.
+    Found 1-bit xor2 for signal <comp_out_9$xor0002>.
+    Found 1-bit xor2 for signal <comp_out_9$xor0003>.
+    Found 1-bit xor2 for signal <comp_out_9$xor0004>.
+Unit <Q_block> synthesized.
+
+
+Synthesizing Unit <V_block>.
+    Related source file is "C:/arxitektonikh1/V_block.vhd".
+Unit <V_block> synthesized.
+
+
+Synthesizing Unit <Register_File>.
+    Related source file is "C:/arxitektonikh1/Register_File.vhd".
+Unit <Register_File> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 1184
+ 1-bit register                                        : 1184
+# Xors                                                 : 160
+ 1-bit xor2                                            : 160
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 1184
+ Flip-Flops                                            : 1184
+# Xors                                                 : 160
+ 1-bit xor2                                            : 160
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Register_File> ...
+
+Optimizing unit <Q_block> ...
+
+Optimizing unit <V_block> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Register_File, actual ratio is 13.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1184
+ Flip-Flops                                            : 1184
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Register_File.ngr
+Top Level Output File Name         : Register_File
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 134
+
+Cell Usage :
+# BELS                             : 3649
+#      GND                         : 1
+#      LUT2                        : 66
+#      LUT3                        : 1658
+#      LUT3_D                      : 32
+#      LUT4                        : 1360
+#      LUT4_D                      : 64
+#      MUXF5                       : 468
+# FlipFlops/Latches                : 1184
+#      FDC                         : 160
+#      FDCE                        : 1024
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 133
+#      IBUF                        : 59
+#      OBUF                        : 74
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s1600efg320-5 
+
+ Number of Slices:                     1732  out of  14752    11%  
+ Number of Slice Flip Flops:           1184  out of  29504     4%  
+ Number of 4 input LUTs:               3180  out of  29504    10%  
+ Number of IOs:                         134
+ Number of bonded IOBs:                 134  out of    250    53%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clk                                | BUFGP                  | 1184  |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+-----------------------------------------------+-------+
+Control Signal                     | Buffer(FF name)                               | Load  |
+-----------------------------------+-----------------------------------------------+-------+
+N0(XST_GND:G)                      | NONE(Q_unit/GEN[0].Qreg/Reg1BitR0/flipflop0/q)| 1184  |
+-----------------------------------+-----------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 4.205ns (Maximum Frequency: 237.832MHz)
+   Minimum input arrival time before clock: 6.610ns
+   Maximum output required time after clock: 11.924ns
+   Maximum combinational path delay: 14.281ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clk'
+  Clock period: 4.205ns (frequency: 237.832MHz)
+  Total number of paths / destination ports: 6080 / 1184
+-------------------------------------------------------------------------
+Delay:               4.205ns (Levels of Logic = 3)
+  Source:            Q_unit/GEN[0].Qreg/Reg1BitR2/flipflop0/q (FF)
+  Destination:       Q_unit/GEN[0].Qreg/Reg1BitR1/flipflop0/q (FF)
+  Source Clock:      Clk rising
+  Destination Clock: Clk rising
+
+  Data Path: Q_unit/GEN[0].Qreg/Reg1BitR2/flipflop0/q to Q_unit/GEN[0].Qreg/Reg1BitR1/flipflop0/q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.514   0.481  Q_unit/GEN[0].Qreg/Reg1BitR2/flipflop0/q (Q_unit/GEN[0].Qreg/Reg1BitR2/flipflop0/q)
+     LUT4_D:I2->O          3   0.612   0.603  Q_unit/comp_out_0_mux000075 (Q_unit/comp_out_0_mux000075)
+     LUT3_D:I0->O          4   0.612   0.502  Q_unit/comp_out_0_mux000077_1 (Q_unit/comp_out_0_mux000077)
+     LUT4:I3->O            1   0.612   0.000  Q_unit/GEN[0].Qreg/Reg1BitR4/mux0/output1 (Q_unit/GEN[0].Qreg/Reg1BitR4/muxOut)
+     FDC:D                     0.268          Q_unit/GEN[0].Qreg/Reg1BitR4/flipflop0/q
+    ----------------------------------------
+    Total                      4.205ns (2.618ns logic, 1.587ns route)
+                                       (62.3% logic, 37.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
+  Total number of paths / destination ports: 11616 / 2208
+-------------------------------------------------------------------------
+Offset:              6.610ns (Levels of Logic = 5)
+  Source:            CDB<37> (PAD)
+  Destination:       Q_unit/GEN[0].Qreg/Reg1BitR1/flipflop0/q (FF)
+  Destination Clock: Clk rising
+
+  Data Path: CDB<37> to Q_unit/GEN[0].Qreg/Reg1BitR1/flipflop0/q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.106   0.532  CDB_37_IBUF (CDB_37_IBUF)
+     LUT2:I0->O           32   0.612   1.225  Q_unit/comp_out_0_mux000031 (Q_unit/N192)
+     LUT3:I0->O            4   0.612   0.529  Q_unit/comp_out_3_mux00007 (Q_unit/comp_out_3_mux00007)
+     LUT3_D:I2->O          4   0.612   0.502  Q_unit/comp_out_3_mux000077_1 (Q_unit/comp_out_3_mux000077)
+     LUT4:I3->O            1   0.612   0.000  Q_unit/GEN[3].Qreg/Reg1BitR4/mux0/output1 (Q_unit/GEN[3].Qreg/Reg1BitR4/muxOut)
+     FDC:D                     0.268          Q_unit/GEN[3].Qreg/Reg1BitR4/flipflop0/q
+    ----------------------------------------
+    Total                      6.610ns (3.822ns logic, 2.788ns route)
+                                       (57.8% logic, 42.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk'
+  Total number of paths / destination ports: 14208 / 74
+-------------------------------------------------------------------------
+Offset:              11.924ns (Levels of Logic = 9)
+  Source:            Q_unit/GEN[12].Qreg/Reg1BitR2/flipflop0/q (FF)
+  Destination:       Vj<31> (PAD)
+  Source Clock:      Clk rising
+
+  Data Path: Q_unit/GEN[12].Qreg/Reg1BitR2/flipflop0/q to Vj<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.514   0.481  Q_unit/GEN[12].Qreg/Reg1BitR2/flipflop0/q (Q_unit/GEN[12].Qreg/Reg1BitR2/flipflop0/q)
+     LUT4_D:I2->O          3   0.612   0.603  Q_unit/comp_out_12_mux000075 (Q_unit/comp_out_12_mux000075)
+     LUT3:I0->O           37   0.612   1.226  Q_unit/comp_out_12_mux000077 (Value_WrEn<12>)
+     LUT3:I0->O            2   0.612   0.410  V_unit/GEN[12].Vreg/Reg4BitR7/Reg1BitR3/muxOut1 (V_unit/GEN[12].Vreg/Reg4BitR7/Reg1BitR3/muxOut)
+     LUT4:I2->O            1   0.612   0.000  V_unit/muxk/mux32Bit0/mux31/output343_F (N224)
+     MUXF5:I0->O           1   0.278   0.509  V_unit/muxk/mux32Bit0/mux31/output343 (V_unit/muxk/mux32Bit0/mux31/output343)
+     LUT2:I0->O            1   0.612   0.000  V_unit/muxk/mux32Bit0/mux31/output5801 (V_unit/muxk/mux32Bit0/mux31/output5801)
+     MUXF5:I1->O           1   0.278   0.426  V_unit/muxk/mux32Bit0/mux31/output580_f5 (V_unit/muxk/mux32Bit0/mux31/output580)
+     LUT3:I1->O            1   0.612   0.357  V_unit/muxk/mux32Bit0/mux31/output608 (Vk_31_OBUF)
+     OBUF:I->O                 3.169          Vk_31_OBUF (Vk<31>)
+    ----------------------------------------
+    Total                     11.924ns (7.911ns logic, 4.013ns route)
+                                       (66.3% logic, 33.7% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 26590 / 74
+-------------------------------------------------------------------------
+Delay:               14.281ns (Levels of Logic = 11)
+  Source:            CDB<37> (PAD)
+  Destination:       Vj<31> (PAD)
+
+  Data Path: CDB<37> to Vj<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.106   0.532  CDB_37_IBUF (CDB_37_IBUF)
+     LUT2:I0->O           32   0.612   1.225  Q_unit/comp_out_0_mux000031 (Q_unit/N192)
+     LUT3_D:I0->O          3   0.612   0.481  Q_unit/comp_out_14_mux00007 (Q_unit/comp_out_14_mux00007)
+     LUT3:I2->O           37   0.612   1.226  Q_unit/comp_out_14_mux000077 (Value_WrEn<14>)
+     LUT3:I0->O            2   0.612   0.410  V_unit/GEN[14].Vreg/Reg4BitR7/Reg1BitR3/muxOut1 (V_unit/GEN[14].Vreg/Reg4BitR7/Reg1BitR3/muxOut)
+     LUT4:I2->O            1   0.612   0.000  V_unit/muxk/mux32Bit0/mux31/output343_G (N225)
+     MUXF5:I1->O           1   0.278   0.509  V_unit/muxk/mux32Bit0/mux31/output343 (V_unit/muxk/mux32Bit0/mux31/output343)
+     LUT2:I0->O            1   0.612   0.000  V_unit/muxk/mux32Bit0/mux31/output5801 (V_unit/muxk/mux32Bit0/mux31/output5801)
+     MUXF5:I1->O           1   0.278   0.426  V_unit/muxk/mux32Bit0/mux31/output580_f5 (V_unit/muxk/mux32Bit0/mux31/output580)
+     LUT3:I1->O            1   0.612   0.357  V_unit/muxk/mux32Bit0/mux31/output608 (Vk_31_OBUF)
+     OBUF:I->O                 3.169          Vk_31_OBUF (Vk<31>)
+    ----------------------------------------
+    Total                     14.281ns (9.115ns logic, 5.166ns route)
+                                       (63.8% logic, 36.2% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 53.00 secs
+Total CPU time to Xst completion: 52.67 secs
+ 
+--> 
+
+Total memory usage is 483492 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

@@ -9,106 +9,67 @@ entity Register_File is
 		Rj : in  STD_LOGIC_VECTOR (4 downto 0);
 		Rk : in  STD_LOGIC_VECTOR (4 downto 0);
 		CDB : in  STD_LOGIC_VECTOR (37 downto 0);
-		Vi : out  STD_LOGIC_VECTOR (31 downto 0);
 		Vj : out  STD_LOGIC_VECTOR (31 downto 0);
-		Qi : out  STD_LOGIC_VECTOR (4 downto 0);
-		Qj : out  STD_LOGIC_VECTOR (4 downto 0));
+		Vk : out  STD_LOGIC_VECTOR (31 downto 0);
+		Qj : out  STD_LOGIC_VECTOR (4 downto 0);
+		Qk : out  STD_LOGIC_VECTOR (4 downto 0);
+		Clk : in  STD_LOGIC);
 end Register_File;
 
 architecture Behavioral of Register_File is
 
-COMPONENT Reg5BitR
+COMPONENT Q_block
 	port(
-		Clk,WrEn,Reset : in std_logic;
-		Din : in  STD_LOGIC_VECTOR (4 downto 0);
-		Dout : out std_logic_VECTOR (4 downto 0)); 
+		Clk : in std_logic;
+		Ri : in  STD_LOGIC_VECTOR (4 downto 0);
+		Rj : in  STD_LOGIC_VECTOR (4 downto 0);
+		Rk : in  STD_LOGIC_VECTOR (4 downto 0);
+		tag : in  STD_LOGIC_VECTOR (4 downto 0);
+		Instr_valid : in  STD_LOGIC;
+		CDB_Q : in  STD_LOGIC_VECTOR (4 downto 0);
+		CDB_valid : in  STD_LOGIC;
+		Qj : out  STD_LOGIC_VECTOR (4 downto 0);
+		Qk : out  STD_LOGIC_VECTOR (4 downto 0);
+		Value_WrEn : out  STD_LOGIC_VECTOR (31 downto 0)); 
 END COMPONENT;
 
-COMPONENT Reg32BitR
+COMPONENT V_block
 	port(
-		Clk,WrEn,Reset : in std_logic;
-		Din : in  STD_LOGIC_VECTOR (31 downto 0);
-		Dout : out std_logic_VECTOR (31 downto 0)); 
+		CDB_value : in  STD_LOGIC_VECTOR (31 downto 0);
+		Rj : in  STD_LOGIC_VECTOR (4 downto 0);
+		Rk : in  STD_LOGIC_VECTOR (4 downto 0);
+		Vj : out  STD_LOGIC_VECTOR (31 downto 0);
+		Vk : out  STD_LOGIC_VECTOR (31 downto 0);
+		V_WrEn : in  STD_LOGIC_VECTOR (31 downto 0);
+		Clk : in  STD_LOGIC);
 END COMPONENT;
 
-COMPONENT mux32to1_32Bit
-	port(
-		in0 : in  STD_LOGIC_VECTOR (31 downto 0);
-		in1 : in  STD_LOGIC_VECTOR (31 downto 0);
-		in2 : in  STD_LOGIC_VECTOR (31 downto 0);
-		in3 : in  STD_LOGIC_VECTOR (31 downto 0);
-		in4 : in  STD_LOGIC_VECTOR (31 downto 0);
-		in5 : in  STD_LOGIC_VECTOR (31 downto 0);
-		in6 : in  STD_LOGIC_VECTOR (31 downto 0);
-		in7 : in  STD_LOGIC_VECTOR (31 downto 0);
-		in8 : in  STD_LOGIC_VECTOR (31 downto 0);
-		in9 : in  STD_LOGIC_VECTOR (31 downto 0);
-		in10 : in  STD_LOGIC_VECTOR (31 downto 0);
-		in11 : in  STD_LOGIC_VECTOR (31 downto 0);
-		in12 : in  STD_LOGIC_VECTOR (31 downto 0);
-		in13 : in  STD_LOGIC_VECTOR (31 downto 0);
-		in14 : in  STD_LOGIC_VECTOR (31 downto 0);
-		in15 : in  STD_LOGIC_VECTOR (31 downto 0);
-		in16 : in  STD_LOGIC_VECTOR (31 downto 0);
-		in17 : in  STD_LOGIC_VECTOR (31 downto 0);
-		in18 : in  STD_LOGIC_VECTOR (31 downto 0);
-		in19 : in  STD_LOGIC_VECTOR (31 downto 0);
-		in20 : in  STD_LOGIC_VECTOR (31 downto 0);
-		in21 : in  STD_LOGIC_VECTOR (31 downto 0);
-		in22 : in  STD_LOGIC_VECTOR (31 downto 0);
-		in23 : in  STD_LOGIC_VECTOR (31 downto 0);
-		in24 : in  STD_LOGIC_VECTOR (31 downto 0);
-		in25 : in  STD_LOGIC_VECTOR (31 downto 0);
-		in26 : in  STD_LOGIC_VECTOR (31 downto 0);
-		in27 : in  STD_LOGIC_VECTOR (31 downto 0);
-		in28 : in  STD_LOGIC_VECTOR (31 downto 0);
-		in29 : in  STD_LOGIC_VECTOR (31 downto 0);
-		in30 : in  STD_LOGIC_VECTOR (31 downto 0);
-		in31 : in  STD_LOGIC_VECTOR (31 downto 0);
-		sel : in  STD_LOGIC_VECTOR (4 downto 0);
-		output : out  STD_LOGIC_VECTOR (31 downto 0));
-END COMPONENT;
-
-COMPONENT mux32to1_5Bit
-	port( 
-		in0 : in  STD_LOGIC_VECTOR (4 downto 0);
-		in1 : in  STD_LOGIC_VECTOR (4 downto 0);
-		in2 : in  STD_LOGIC_VECTOR (4 downto 0);
-		in3 : in  STD_LOGIC_VECTOR (4 downto 0);
-		in4 : in  STD_LOGIC_VECTOR (4 downto 0);
-		in5 : in  STD_LOGIC_VECTOR (4 downto 0);
-		in6 : in  STD_LOGIC_VECTOR (4 downto 0);
-		in7 : in  STD_LOGIC_VECTOR (4 downto 0);
-		in8 : in  STD_LOGIC_VECTOR (4 downto 0);
-		in9 : in  STD_LOGIC_VECTOR (4 downto 0);
-		in10 : in  STD_LOGIC_VECTOR (4 downto 0);
-		in11 : in  STD_LOGIC_VECTOR (4 downto 0);
-		in12 : in  STD_LOGIC_VECTOR (4 downto 0);
-		in13 : in  STD_LOGIC_VECTOR (4 downto 0);
-		in14 : in  STD_LOGIC_VECTOR (4 downto 0);
-		in15 : in  STD_LOGIC_VECTOR (4 downto 0);
-		in16 : in  STD_LOGIC_VECTOR (4 downto 0);
-		in17 : in  STD_LOGIC_VECTOR (4 downto 0);
-		in18 : in  STD_LOGIC_VECTOR (4 downto 0);
-		in19 : in  STD_LOGIC_VECTOR (4 downto 0);
-		in20 : in  STD_LOGIC_VECTOR (4 downto 0);
-		in21 : in  STD_LOGIC_VECTOR (4 downto 0);
-		in22 : in  STD_LOGIC_VECTOR (4 downto 0);
-		in23 : in  STD_LOGIC_VECTOR (4 downto 0);
-		in24 : in  STD_LOGIC_VECTOR (4 downto 0);
-		in25 : in  STD_LOGIC_VECTOR (4 downto 0);
-		in26 : in  STD_LOGIC_VECTOR (4 downto 0);
-		in27 : in  STD_LOGIC_VECTOR (4 downto 0);
-		in28 : in  STD_LOGIC_VECTOR (4 downto 0);
-		in29 : in  STD_LOGIC_VECTOR (4 downto 0);
-		in30 : in  STD_LOGIC_VECTOR (4 downto 0);
-		in4 : in  STD_LOGIC_VECTOR (4 downto 0);
-		sel : in  STD_LOGIC_VECTOR (4 downto 0);
-		output : out  STD_LOGIC_VECTOR (4 downto 0));
-end COMPONENT;
-
+signal Value_WrEn : STD_LOGIC_VECTOR (31 downto 0);
 begin
 
-
+Q_unit : Q_block
+	port map(
+		Clk => Clk,
+		Ri => Ri,
+		Rj => Rj,
+		Rk => Rk,
+		tag => tag,
+		Instr_valid => Instr_valid,
+		CDB_Q => CDB(36 downto 32),
+		CDB_valid => CDB(37),
+		Qj => Qj,
+		Qk => Qk,
+		Value_WrEn => Value_WrEn);
+		
+V_unit : V_block
+	port map(
+		CDB_value => CDB(31 downto 0),
+		Rj => Rj,
+		Rk => Rk,
+		Vj => Vj,
+		Vk => Vk,
+		V_WrEn => Value_WrEn,
+		Clk => Clk);
+		
 end Behavioral;
 

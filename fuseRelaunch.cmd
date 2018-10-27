@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "C:/arxitektonikh1/mdl_test_isim_beh.exe" -prj "C:/arxitektonikh1/mdl_test_beh.prj" "work.mdl_test" 
+-intstyle "ise" -incremental -o "C:/arxitektonikh1/test_RF_isim_beh.exe" -prj "C:/arxitektonikh1/test_RF_beh.prj" "work.test_RF" 

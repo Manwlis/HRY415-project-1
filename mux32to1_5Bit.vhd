@@ -33,14 +33,14 @@ entity mux32to1_5Bit is
 		in28 : in  STD_LOGIC_VECTOR (4 downto 0);
 		in29 : in  STD_LOGIC_VECTOR (4 downto 0);
 		in30 : in  STD_LOGIC_VECTOR (4 downto 0);
-		in4 : in  STD_LOGIC_VECTOR (4 downto 0);
+		in31 : in  STD_LOGIC_VECTOR (4 downto 0);
 		sel : in  STD_LOGIC_VECTOR (4 downto 0);
 		output : out  STD_LOGIC_VECTOR (4 downto 0));
 end mux32to1_5Bit;
 
 architecture Structural of mux32to1_5Bit is
 
-COMPONENT mux32Bit
+COMPONENT mux5Bit
 	port(
 		sel : in  STD_LOGIC;
 		A : in  STD_LOGIC_VECTOR (4 downto 0);
@@ -49,7 +49,7 @@ COMPONENT mux32Bit
 END COMPONENT;
 
 
-COMPONENT mux16to1_32Bit
+COMPONENT mux16to1_5Bit
 	PORT(
 		in0 : IN  std_logic_vector(4 downto 0);
 		in1 : IN  std_logic_vector(4 downto 0);
@@ -113,7 +113,7 @@ port map (
 	in12 => in28,
 	in13 => in29,
 	in14 => in30,
-	in15 => in4,
+	in15 => in31,
 	sel => sel(3 downto 0),
 	output => mux1out);
 

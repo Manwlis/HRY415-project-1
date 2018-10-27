@@ -51,7 +51,7 @@ port
  output : out std_logic);
 END COMPONENT;
 
-signal muxOut,flipflopOut  : std_logic;
+signal muxOut,flipflopOut  : std_logic := '0';
 
 begin
 

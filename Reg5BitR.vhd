@@ -6,7 +6,7 @@ entity Reg5BitR is
 		WrEn : in  STD_LOGIC;
 		Reset : in  STD_LOGIC;
 		Din : in  STD_LOGIC_VECTOR (4 downto 0);
-		Dout : out  STD_LOGIC_VECTOR (4 downto 0));
+		Dout : out  STD_LOGIC_VECTOR (4 downto 0):="00000");
 end Reg5BitR;
 
 architecture Behavioral of Reg5BitR is

@@ -1,5 +1,36 @@
+--------------------------------------------------------------------------------
+-- Company: 
+-- Engineer:
+--
+-- Create Date:   12:53:14 10/27/2018
+-- Design Name:   
+-- Module Name:   C:/arxitektonikh1/Issue_unit_test.vhd
+-- Project Name:  arxitektonikh1
+-- Target Device:  
+-- Tool versions:  
+-- Description:   
+-- 
+-- VHDL Test Bench Created by ISE for module: Issue_unit
+-- 
+-- Dependencies:
+-- 
+-- Revision:
+-- Revision 0.01 - File Created
+-- Additional Comments:
+--
+-- Notes: 
+-- This testbench has been automatically generated using types std_logic and
+-- std_logic_vector for the ports of the unit under test.  Xilinx recommends
+-- that these types always be used for the top-level I/O of a design in order
+-- to guarantee that the testbench will bind correctly to the post-implementation 
+-- simulation model.
+--------------------------------------------------------------------------------
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
+ 
+-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
+--USE ieee.numeric_std.ALL;
  
 ENTITY Issue_unit_test IS
 END Issue_unit_test;
@@ -23,7 +54,11 @@ ARCHITECTURE behavior OF Issue_unit_test IS
          Fop : OUT  std_logic_vector(1 downto 0);
          Ri : OUT  std_logic_vector(4 downto 0);
          Rj : OUT  std_logic_vector(4 downto 0);
-         Rk : OUT  std_logic_vector(4 downto 0)
+         Rk : OUT  std_logic_vector(4 downto 0);
+         tag1 : IN  std_logic_vector(4 downto 0);
+         tag2 : IN  std_logic_vector(4 downto 0);
+         tag3 : IN  std_logic_vector(4 downto 0);
+         tagRF : OUT  std_logic_vector(4 downto 0)
         );
     END COMPONENT;
     
@@ -36,7 +71,9 @@ ARCHITECTURE behavior OF Issue_unit_test IS
    signal IF_Rj : std_logic_vector(4 downto 0) := (others => '0');
    signal IF_Rk : std_logic_vector(4 downto 0) := (others => '0');
    signal available : std_logic_vector(2 downto 0) := (others => '0');
-	signal clock : std_logic := '0';
+   signal tag1 : std_logic_vector(4 downto 0) := (others => '0');
+   signal tag2 : std_logic_vector(4 downto 0) := (others => '0');
+   signal tag3 : std_logic_vector(4 downto 0) := (others => '0');
 
  	--Outputs
    signal accepted : std_logic;
@@ -46,6 +83,8 @@ ARCHITECTURE behavior OF Issue_unit_test IS
    signal Ri : std_logic_vector(4 downto 0);
    signal Rj : std_logic_vector(4 downto 0);
    signal Rk : std_logic_vector(4 downto 0);
+   signal tagRF : std_logic_vector(4 downto 0);
+	signal clock : std_logic;
    -- No clocks detected in port list. Replace <clock> below with 
    -- appropriate port name 
  
@@ -68,7 +107,11 @@ BEGIN
           Fop => Fop,
           Ri => Ri,
           Rj => Rj,
-          Rk => Rk
+          Rk => Rk,
+          tag1 => tag1,
+          tag2 => tag2,
+          tag3 => tag3,
+          tagRF => tagRF
         );
 
    -- Clock process definitions
@@ -84,7 +127,6 @@ BEGIN
    -- Stimulus process
    stim_proc: process
    begin		
-
 		-- oxi availble autos pou zitaei
 		issue <= '1';
 		FU_type <= "00";
@@ -93,6 +135,9 @@ BEGIN
 		IF_Rj <= "00000";
 		IF_Rk <= "00000";
 		available <="011";
+		tag1 <= "00001";
+		tag2 <= "00010";
+		tag3 <= "00011";
       wait for clock_period;
 
 		-- availble autos pou zitaei
