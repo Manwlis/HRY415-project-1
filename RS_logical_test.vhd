@@ -147,8 +147,14 @@ BEGIN
          CDB <="10001100000000000000000000000000000111";
 		--stelnoume gia exodo
 		wait for Clk_period;
-		 ready_FU<='1';
-		 issue_ready <='0';
+			ready_FU<='1';
+			issue_ready <='1';
+		   RF_Qj <="00000";
+         RF_Qk <="00000";
+         CDB <="00001100000000000000000000000000000111";
+			
+		wait for Clk_period*5;
+			issue_ready <='0';
       wait;
    end process;
 

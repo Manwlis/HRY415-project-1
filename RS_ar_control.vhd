@@ -26,26 +26,26 @@ signal line_select : STD_LOGIC_VECTOR (1 downto 0);
 
 begin
 	RS_line_select <= line_select;
-	available <= '0' when busy_line = "111" else '1';
+	available <= '0' when busy_line = "111" and busy_enable_out = "000" else '1';
 	busy_enable <= busy_enable_in or busy_enable_out;
 	
 	-- eisodos entolwn
-	eisodos_entolwn : process(IssueRs, busy_line)
+	eisodos_entolwn : process(IssueRs, busy_line, busy_enable_out)
 	begin
 		-- hr8e entolh
 		if IssueRs = '1' then
 			-- bazw thn entolh sth prwth grammh kataxwrhtwn
-			if busy_line(0) = '0' then
+			if busy_line(0) = '0' or busy_enable_out(0) = '1' then
 				control_enable <= "001";
 				busy_enable_in <= "001";
 				tagRF <= "01001";
 			-- bazw thn entolh sth deuterh grammh kataxwrhtwn
-			elsif busy_line(1) = '0' then
+			elsif busy_line(1) = '0' or busy_enable_out(1) = '1' then
 				control_enable <= "010";
 				busy_enable_in <= "010";
 				tagRF <= "01010";
 			-- bazw thn entolh sth trith grammh kataxwrhtwn
-			elsif busy_line(2) = '0' then
+			elsif busy_line(2) = '0' or busy_enable_out(2) = '1' then
 				control_enable <= "100";
 				busy_enable_in <= "100";
 				tagRF <= "01100";
