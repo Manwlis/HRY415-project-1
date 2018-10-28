@@ -1,0 +1,10 @@
+Command line:
+   RS_logical_test_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  49769
+
+Sun Oct 28 21:41:05 2018
+
+
+ Elaboration Time: 0.078 sec

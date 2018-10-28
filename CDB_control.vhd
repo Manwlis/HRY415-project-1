@@ -40,14 +40,14 @@ begin
 				
 			--	me sigkrouseis	
 			when "011" =>
-				if currentState = grantC then 
-					sel <= "01";
-					sig_grant <= "010";
-					CDBvalid <= '1';
-				else 
+				if currentState = grantB then 
 					sel <= "10";
 					sig_grant <= "001";
 					CDBvalid <= '1';	
+				else 
+					sel <= "01";
+					sig_grant <= "010";
+					CDBvalid <= '1';
 				end if;
 					
 			when "101" =>
@@ -96,7 +96,7 @@ begin
 	end process;
 
 	-- 8imatai piws xrhsimopoihse to cdb ton proigoumeno kuklo
-	round_robbing_mem: process (currentState,sig_grant,Clk)
+	round_robbing_mem: process (currentState,sig_grant)
 	begin
 
 		if sig_grant = "100" then

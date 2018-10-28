@@ -5,5 +5,25 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">mux32Bit1</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">Vj_mux</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">mux32Bit1</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">Vk_mux</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">currentState_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">control</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">currentState_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">control</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">currentState_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">RS_logical_control</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">currentState_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">RS_logical_control</arg>&gt;.
+</msg>
+
 </messages>
 
