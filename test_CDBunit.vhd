@@ -70,7 +70,7 @@ ARCHITECTURE behavior OF test_CDBunit IS
    signal grant : std_logic_vector(2 downto 0);
 
    -- Clock period definitions
-   constant Clk_period : time := 10 ns;
+   constant Clk_period : time := 50 ns;
  
 BEGIN
  
@@ -107,18 +107,18 @@ BEGIN
 		Q1 <= "00001";
 		Q2 <= "00010";
 		Q3 <= "00100";
-		Value1 <= "00000000000000000000000000000001";
-		Value2 <= "00000000000000000000000000000010";
-		Value3 <= "00000000000000000000000000000100";
+		Value1 <= "00000000000000000000000000001001";
+		Value2 <= "00000000000000000000000000001010";
+		Value3 <= "00000000000000000000000000001100";
 		request <= "010";
 		
       wait for Clk_period;
 		Q1 <= "00001";
 		Q2 <= "00010";
 		Q3 <= "00100";
-		Value1 <= "00000000000000000000000000000001";
-		Value2 <= "00000000000000000000000000000010";
-		Value3 <= "00000000000000000000000000000100";
+		Value1 <= "00000000000000000000000000001001";
+		Value2 <= "00000000000000000000000000001010";
+		Value3 <= "00000000000000000000000000001100";
 		request <= "001";
 		
 		wait for Clk_period;
@@ -126,10 +126,9 @@ BEGIN
 		request <= "101";
 		wait for Clk_period;
 
-		request <= "110";
-		wait for Clk_period;
-
 		request <= "111";
+		wait for Clk_period*2;
+		request<="000";
       wait;
    end process;
 

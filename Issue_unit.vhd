@@ -60,14 +60,14 @@ begin
 				accepted <= '0';
 				Instr_valid <= '0';
 				issueRS <= "000";
-				tagRF <= "11111";
+				tagRF <= "00000";
 			end if;
 		-- den hr8e entolh
 		else
 			accepted <= '0';
 			Instr_valid <= '0';
 			issueRS <= "000";
-			tagRF <= "11111";		
+			tagRF <= "00000";		
 		end if;
 	end process;
 	

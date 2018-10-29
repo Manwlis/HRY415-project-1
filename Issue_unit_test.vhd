@@ -88,7 +88,7 @@ ARCHITECTURE behavior OF Issue_unit_test IS
    -- No clocks detected in port list. Replace <clock> below with 
    -- appropriate port name 
  
-   constant clock_period : time := 10 ns;
+   constant clock_period : time := 50 ns;
  
 BEGIN
  
@@ -160,6 +160,15 @@ BEGIN
 		available <= "111";
       wait for clock_period;
 		
+		issue <= '1';
+		FU_type <= "10";
+		IF_Fop <= "00";
+		IF_Ri <= "00000";
+		IF_Rj <= "00000";
+		IF_Rk <= "00000";
+		available <= "111";
+      wait for clock_period;
+		
 		-- issue = 0
 		issue <= '0';
 		FU_type <= "01";
@@ -168,6 +177,16 @@ BEGIN
 		IF_Rj <= "00000";
 		IF_Rk <= "00000";
 		available <= "111";
+      wait for clock_period;
+		
+		-- deadlock
+		issue <= '1';
+		FU_type <= "01";
+		IF_Fop <= "00";
+		IF_Ri <= "00000";
+		IF_Rj <= "00000";
+		IF_Rk <= "00000";
+		available <= "000";
       wait for clock_period;
       wait;
    end process;
