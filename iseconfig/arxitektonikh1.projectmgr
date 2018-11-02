@@ -40,6 +40,7 @@
          <ClosedNode>/FU_arithmetic - Behavioral C:|arxitektonikh1|FU_arithmetic.vhd/q_mid_reg - Reg5BitR - Behavioral</ClosedNode>
          <ClosedNode>/FU_arithmetic - Behavioral C:|arxitektonikh1|FU_arithmetic.vhd/q_reg - Reg5BitR - Behavioral</ClosedNode>
          <ClosedNode>/FU_arithmetic - Behavioral C:|arxitektonikh1|FU_arithmetic.vhd/tag_reg - Reg5BitR - Behavioral</ClosedNode>
+         <ClosedNode>/FU_logical - Behavioral C:|arxitektonikh1|FU_logical.vhd</ClosedNode>
          <ClosedNode>/FU_logical - Behavioral C:|arxitektonikh1|FU_logical.vhd/Result_reg - Reg32BitR - Structural</ClosedNode>
          <ClosedNode>/FU_logical - Behavioral C:|arxitektonikh1|FU_logical.vhd/Value_in1_reg - Reg32BitR - Structural</ClosedNode>
          <ClosedNode>/FU_logical - Behavioral C:|arxitektonikh1|FU_logical.vhd/Value_in2_reg - Reg32BitR - Structural</ClosedNode>
@@ -54,6 +55,7 @@
          <ClosedNode>/RS_unit_arithemtic - Behavioral C:|arxitektonikh1|RSUnitAr.vhd/RS_reg_lines - RS_reg_line - Behavioral</ClosedNode>
          <ClosedNode>/RS_unit_arithemtic - Behavioral C:|arxitektonikh1|RSUnitAr.vhd/Vj_mux - mux4to1_32Bit - Behavioral</ClosedNode>
          <ClosedNode>/RS_unit_arithemtic - Behavioral C:|arxitektonikh1|RSUnitAr.vhd/Vk_mux - mux4to1_32Bit - Behavioral</ClosedNode>
+         <ClosedNode>/RS_unit_logical - Behavioral C:|arxitektonikh1|RS_unit_logical.vhd</ClosedNode>
          <ClosedNode>/RS_unit_logical - Behavioral C:|arxitektonikh1|RS_unit_logical.vhd/RS_reg_lines - RS_reg_line - Behavioral</ClosedNode>
          <ClosedNode>/RS_unit_logical - Behavioral C:|arxitektonikh1|RS_unit_logical.vhd/Vj_mux - mux4to1_32Bit - Behavioral</ClosedNode>
          <ClosedNode>/RS_unit_logical - Behavioral C:|arxitektonikh1|RS_unit_logical.vhd/Vk_mux - mux4to1_32Bit - Behavioral</ClosedNode>
@@ -77,6 +79,7 @@
          <ClosedNode>/Reg32BitR - Structural C:|arxitektonikh1|Reg32BitR.vhd/Reg4BitR7 - Reg4BitR - Behavioral/Reg1BitR1 - Reg1BitR - Behavioral</ClosedNode>
          <ClosedNode>/Reg32BitR - Structural C:|arxitektonikh1|Reg32BitR.vhd/Reg4BitR7 - Reg4BitR - Behavioral/Reg1BitR2 - Reg1BitR - Behavioral</ClosedNode>
          <ClosedNode>/Reg5BitR - Behavioral C:|arxitektonikh1|Reg5BitR.vhd</ClosedNode>
+         <ClosedNode>/Register_File - Behavioral C:|arxitektonikh1|Register_File.vhd</ClosedNode>
          <ClosedNode>/Register_File - Behavioral C:|arxitektonikh1|Register_File.vhd/Q_unit - Q_block - Behavioral</ClosedNode>
          <ClosedNode>/Register_File - Behavioral C:|arxitektonikh1|Register_File.vhd/Q_unit - Q_block - Behavioral/Qreg - Reg5BitR - Behavioral</ClosedNode>
          <ClosedNode>/Register_File - Behavioral C:|arxitektonikh1|Register_File.vhd/Q_unit - Q_block - Behavioral/demuxQ - demux5to32 - Structural</ClosedNode>
@@ -148,13 +151,13 @@
          <ClosedNode>/mux8to1_5Bit - Behavioral C:|arxitektonikh1|mux8to1_5Bit.vhd/mux5Bit0 - mux5Bit - Behavioral</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Issue_unit - Behavioral (C:/arxitektonikh1/Issue_unit.vhd)</SelectedItem>
+         <SelectedItem>Register_File - Behavioral (C:/arxitektonikh1/Register_File.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001af000000020000000000000000000000000200000064ffffffff000000810000000300000002000001af0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000156000000020000000000000000000000000200000064ffffffff000000810000000300000002000001560000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>Issue_unit - Behavioral (C:/arxitektonikh1/Issue_unit.vhd)</CurrentItem>
+      <CurrentItem>Register_File - Behavioral (C:/arxitektonikh1/Register_File.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -328,7 +331,7 @@
       <CurrentItem>ISim Simulator</CurrentItem>
    </ItemView>
    <SourceProcessView>000000ff00000000000000020000017a000000e101000000050100000002</SourceProcessView>
-   <CurrentView>Behavioral Simulation</CurrentView>
+   <CurrentView>Implementation</CurrentView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_PACKAGE_DECL" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
