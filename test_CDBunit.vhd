@@ -91,9 +91,9 @@ BEGIN
    -- Clock process definitions
    Clk_process :process
    begin
-		Clk <= '1';
-		wait for Clk_period/2;
 		Clk <= '0';
+		wait for Clk_period/2;
+		Clk <= '1';
 		wait for Clk_period/2;
    end process;
  
@@ -101,7 +101,7 @@ BEGIN
    -- Stimulus process
    stim_proc: process
    begin		
-	
+		wait for Clk_period/2;
 		request <= "100";
       wait for Clk_period;
 		Q1 <= "00001";

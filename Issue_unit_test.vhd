@@ -127,6 +127,7 @@ BEGIN
    -- Stimulus process
    stim_proc: process
    begin		
+      wait for clock_period/2;
 		-- oxi availble autos pou zitaei
 		issue <= '1';
 		FU_type <= "00";
@@ -144,28 +145,20 @@ BEGIN
 		issue <= '1';
 		FU_type <= "00";
 		IF_Fop <= "00";
-		IF_Ri <= "00000";
-		IF_Rj <= "00000";
-		IF_Rk <= "00000";
+		IF_Ri <= "10000";
+		IF_Rj <= "11000";
+		IF_Rk <= "11100";
 		available <="111";
       wait for clock_period;
 
 		-- ena issue ana kuklo
 		issue <= '1';
 		FU_type <= "01";
-		IF_Fop <= "00";
-		IF_Ri <= "00000";
-		IF_Rj <= "00000";
-		IF_Rk <= "00000";
 		available <= "111";
       wait for clock_period;
 		
 		issue <= '1';
 		FU_type <= "10";
-		IF_Fop <= "00";
-		IF_Ri <= "00000";
-		IF_Rj <= "00000";
-		IF_Rk <= "00000";
 		available <= "111";
       wait for clock_period;
 		
@@ -173,20 +166,21 @@ BEGIN
 		issue <= '0';
 		FU_type <= "01";
 		IF_Fop <= "00";
-		IF_Ri <= "00000";
-		IF_Rj <= "00000";
-		IF_Rk <= "00000";
 		available <= "111";
       wait for clock_period;
 		
 		-- deadlock
 		issue <= '1';
-		FU_type <= "01";
-		IF_Fop <= "00";
+		FU_type <= "11";
+		IF_Fop <= "11";
 		IF_Ri <= "00000";
 		IF_Rj <= "00000";
 		IF_Rk <= "00000";
-		available <= "000";
+		available <= "011";
+		
+		tag1 <= "10000";
+		tag2 <= "10000";
+		tag3 <= "10000";
       wait for clock_period;
       wait;
    end process;
