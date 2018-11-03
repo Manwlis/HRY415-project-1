@@ -74,6 +74,8 @@ BEGIN
    stim_proc: process
    begin
 	wait for Clk_period/2;
+	
+	-- perimenei o ri to tag 3
 	Ri <= "00000";
 	Rj <= "00001";
 	Rk <= "00010";
@@ -81,34 +83,41 @@ BEGIN
 	Instr_valid <= '1';
 	CDB<="00001100000000000000000000000000000011";
    wait for Clk_period;
-	Ri <= "00000";
+	
+	-- erxetai to tag 3 kai to diavazw kateu8eian, ginetai to forward
+	Ri <= "10000";
 	Rj <= "00000";
 	Rk <= "00010";
 	tag <= "00011";
-	Instr_valid <= '0';
+	Instr_valid <= '1';
 	CDB<="10001100000000000000000000000000000011";
-
    wait for Clk_period;
+	
+	-- akurh entolh den ekteleite
 	Ri <= "00001";
+	Rj <= "00001";
+	Rk <= "00000";
+	tag <= "00011";
+	Instr_valid <= '0';
+	CDB<="00001100000000000000000000000000001111";
+   wait for Clk_period;
+	
+	-- perimenei apotelesmata o 10000
+	Ri <= "10000";
 	Rj <= "00001";
 	Rk <= "00000";
 	tag <= "00011";
 	Instr_valid <= '1';
-	CDB<="00001100000000000000000000000000001111";
+	CDB<="00101100000000000000000000000000001111";
+	
+	-- erxontai ta apotelesmta kai ginetai renaming panw ston idio. Proteraiothta dinetai sth kainourgia entolh
    wait for Clk_period;
-	Ri <= "00001";
-	Rj <= "00001";
+	Ri <= "10000";
+	Rj <= "10000";
 	Rk <= "00000";
-	tag <= "00011";
-	Instr_valid <= '0';
-	CDB<="00001100000000000000000000000000001111";
-   wait for Clk_period;
-	Ri <= "00001";
-	Rj <= "00001";
-	Rk <= "00000";
-	tag <= "00011";
-	Instr_valid <= '0';
-	CDB<="10001100000000000000000000000000001111";
+	tag <= "01111";
+	Instr_valid <= '1';
+	CDB<="10001100000000000000000000000000111111";
    wait for Clk_period;
 
       -- insert stimulus here 

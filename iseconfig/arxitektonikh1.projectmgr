@@ -246,7 +246,6 @@
          <ClosedNode>/RS_arithmetic_test - behavior C:|arxitektonikh1|RS_arithmetic_test.vhd/uut - RS_unit_arithemtic - Behavioral/RS_reg_lines - RS_reg_line - Behavioral</ClosedNode>
          <ClosedNode>/RS_arithmetic_test - behavior C:|arxitektonikh1|RS_arithmetic_test.vhd/uut - RS_unit_arithemtic - Behavioral/Vj_mux - mux4to1_32Bit - Behavioral</ClosedNode>
          <ClosedNode>/RS_arithmetic_test - behavior C:|arxitektonikh1|RS_arithmetic_test.vhd/uut - RS_unit_arithemtic - Behavioral/Vk_mux - mux4to1_32Bit - Behavioral</ClosedNode>
-         <ClosedNode>/RS_logical_test - behavior C:|arxitektonikh1|RS_logical_test.vhd</ClosedNode>
          <ClosedNode>/RS_logical_test - behavior C:|arxitektonikh1|RS_logical_test.vhd/uut - RS_unit_logical - Behavioral/RS_reg_lines - RS_reg_line - Behavioral</ClosedNode>
          <ClosedNode>/RS_logical_test - behavior C:|arxitektonikh1|RS_logical_test.vhd/uut - RS_unit_logical - Behavioral/Vj_mux - mux4to1_32Bit - Behavioral</ClosedNode>
          <ClosedNode>/RS_logical_test - behavior C:|arxitektonikh1|RS_logical_test.vhd/uut - RS_unit_logical - Behavioral/Vk_mux - mux4to1_32Bit - Behavioral</ClosedNode>
@@ -274,13 +273,13 @@
          <ClosedNode>/test_RF - behavior C:|arxitektonikh1|test_RF.vhd</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Issue_unit_test - behavior (C:/arxitektonikh1/Issue_unit_test.vhd)</SelectedItem>
+         <SelectedItem>control - RS_logical_control - Behavioral (C:/arxitektonikh1/RS_logica_control.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000015f000000020000000000000000000000000200000064ffffffff0000008100000003000000020000015f0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001be000000020000000000000000000000000200000064ffffffff000000810000000300000002000001be0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>Issue_unit_test - behavior (C:/arxitektonikh1/Issue_unit_test.vhd)</CurrentItem>
+      <CurrentItem>control - RS_logical_control - Behavioral (C:/arxitektonikh1/RS_logica_control.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>

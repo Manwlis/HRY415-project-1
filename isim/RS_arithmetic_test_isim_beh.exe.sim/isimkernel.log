@@ -1,0 +1,29 @@
+Command line:
+   RS_arithmetic_test_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  49678
+
+Sat Nov 03 12:02:28 2018
+
+
+ Elaboration Time: 0.078001 sec
+
+ Current Memory Usage: 517.882 Meg
+
+ Total Signals          : 5694
+ Total Nets             : 1397
+ Total Signal Drivers   : 1149
+ Total Blocks           : 1200
+ Total Primitive Blocks : 881
+ Total Processes        : 1138
+ Total Traceable Variables  : 12
+ Total Scalar Nets and Variables : 1761
+Total Line Count : 1469
+
+ Total Simulation Time: 0.093601 sec
+
+ Current Memory Usage: 517.882 Meg
+
+Sat Nov 03 12:03:05 2018
+

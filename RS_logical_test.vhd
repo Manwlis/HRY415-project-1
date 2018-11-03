@@ -1,36 +1,7 @@
---------------------------------------------------------------------------------
--- Company: 
--- Engineer:
---
--- Create Date:   21:39:43 10/28/2018
--- Design Name:   
--- Module Name:   C:/arxitektonikh1/RS_logical_test.vhd
--- Project Name:  arxitektonikh1
--- Target Device:  
--- Tool versions:  
--- Description:   
--- 
--- VHDL Test Bench Created by ISE for module: RS_unit_logical
--- 
--- Dependencies:
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
---
--- Notes: 
--- This testbench has been automatically generated using types std_logic and
--- std_logic_vector for the ports of the unit under test.  Xilinx recommends
--- that these types always be used for the top-level I/O of a design in order
--- to guarantee that the testbench will bind correctly to the post-implementation 
--- simulation model.
---------------------------------------------------------------------------------
+
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
  
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---USE ieee.numeric_std.ALL;
  
 ENTITY RS_logical_test IS
 END RS_logical_test;
@@ -125,8 +96,8 @@ BEGIN
          CDB <="00000000000000000000000000000000000000";
          Fop<="00";
          issue_ready <='0';
-         ready_FU<='0';
-		--me issue  ginete save
+         ready_FU<='1';
+		--me issue ginete save
       wait for Clk_period;
 			RF_Vj <="00000000000000000000000000000001";
          RF_Vk <="00000000000000000000000000000011";
@@ -135,26 +106,22 @@ BEGIN
          CDB <="00000000000000000000000000000000000000";
          Fop<="00";
          issue_ready <='1';
-         ready_FU<='0';
       -- fernoume times apo cdb
 		wait for Clk_period*3;
 			issue_ready <='0';
-         ready_FU<='0';
          CDB <="10000100000000000000000000000000000011";			 
 		wait for Clk_period;
 			issue_ready <='0';
-         ready_FU<='0';
          CDB <="10001100000000000000000000000000000111";
 		--stelnoume gia exodo
 		wait for Clk_period;
-			ready_FU<='1';
 			issue_ready <='1';
 		   RF_Qj <="00000";
          RF_Qk <="00000";
          CDB <="00001100000000000000000000000000000111";
 			
 		wait for Clk_period*5;
-			issue_ready <='0';
+			ready_FU<='0';
       wait;
    end process;
 

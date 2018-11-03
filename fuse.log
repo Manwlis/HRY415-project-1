@@ -1,18 +1,40 @@
-Running: fuse.exe -relaunch -intstyle "ise" -incremental -o "C:/arxitektonikh1/Issue_unit_test_isim_beh.exe" -prj "C:/arxitektonikh1/Issue_unit_test_beh.prj" "work.Issue_unit_test" 
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -o "C:/arxitektonikh1/RS_logical_test_isim_beh.exe" -prj "C:/arxitektonikh1/RS_logical_test_beh.prj" "work.RS_logical_test" 
 ISim O.87xd (signature 0xc3576ebc)
 Number of CPUs detected in this system: 16
 Turning on mult-threading, number of parallel sub-compilation jobs: 32 
 Determining compilation order of HDL files
-Parsing VHDL file "C:/arxitektonikh1/Issue_unit.vhd" into library work
-Parsing VHDL file "C:/arxitektonikh1/Issue_unit_test.vhd" into library work
+Parsing VHDL file "C:/arxitektonikh1/mux.vhd" into library work
+Parsing VHDL file "C:/arxitektonikh1/flipflop.vhd" into library work
+Parsing VHDL file "C:/arxitektonikh1/Reg1BitR.vhd" into library work
+Parsing VHDL file "C:/arxitektonikh1/Reg4BitR.vhd" into library work
+Parsing VHDL file "C:/arxitektonikh1/Reg5BitR.vhd" into library work
+Parsing VHDL file "C:/arxitektonikh1/Reg32BitR.vhd" into library work
+Parsing VHDL file "C:/arxitektonikh1/mux5Bit.vhd" into library work
+Parsing VHDL file "C:/arxitektonikh1/mux32Bit.vhd" into library work
+Parsing VHDL file "C:/arxitektonikh1/RS_reg_line.vhd" into library work
+Parsing VHDL file "C:/arxitektonikh1/RS_logica_control.vhd" into library work
+Parsing VHDL file "C:/arxitektonikh1/mux4to1_32Bit.vhd" into library work
+Parsing VHDL file "C:/arxitektonikh1/RS_unit_logical.vhd" into library work
+Parsing VHDL file "C:/arxitektonikh1/RS_logical_test.vhd" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling package standard
 Compiling package std_logic_1164
-Compiling architecture behavioral of entity Issue_unit [issue_unit_default]
-Compiling architecture behavior of entity issue_unit_test
+Compiling architecture behavioral of entity mux [mux_default]
+Compiling architecture behavioral of entity flipflop [flipflop_default]
+Compiling architecture behavioral of entity Reg1BitR [reg1bitr_default]
+Compiling architecture behavioral of entity mux32Bit [mux32bit_default]
+Compiling architecture behavioral of entity Reg4BitR [reg4bitr_default]
+Compiling architecture structural of entity Reg32BitR [reg32bitr_default]
+Compiling architecture behavioral of entity mux5Bit [mux5bit_default]
+Compiling architecture behavioral of entity Reg5BitR [reg5bitr_default]
+Compiling architecture behavioral of entity RS_reg_line [rs_reg_line_default]
+Compiling architecture behavioral of entity mux4to1_32Bit [mux4to1_32bit_default]
+Compiling architecture behavioral of entity RS_logical_control [rs_logical_control_default]
+Compiling architecture behavioral of entity RS_unit_logical [rs_unit_logical_default]
+Compiling architecture behavior of entity rs_logical_test
 Time Resolution for simulation is 1ps.
-Compiled 5 VHDL Units
-Built simulation executable C:/arxitektonikh1/Issue_unit_test_isim_beh.exe
-Fuse Memory Usage: 31776 KB
-Fuse CPU Usage: 529 ms
+Compiled 27 VHDL Units
+Built simulation executable C:/arxitektonikh1/RS_logical_test_isim_beh.exe
+Fuse Memory Usage: 32736 KB
+Fuse CPU Usage: 623 ms

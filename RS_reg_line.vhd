@@ -77,7 +77,7 @@ END COMPONENT;
 
 signal busy_in, busy_reg_out, comparator_j, comparator_k : std_logic;
 signal Vj_WrEn, Vk_WrEn : std_logic;
-signal Vj_in, Vk_in : std_logic_vector(31 downto 0);
+signal Vj_in, Vk_in, Vj_reg_out, Vk_reg_out : std_logic_vector(31 downto 0);
 signal Qj_in, Qk_in, Qj, Qk : std_logic_vector(4 downto 0);
 
 begin
@@ -115,8 +115,12 @@ port map(
 	WrEn => Vj_WrEn,
 	Din => Vj_in,
 	Reset => '0',
-	Dout => Vj_out);
+	Dout => Vj_reg_out);
 
+-- forward tou cdb
+Vj_out <= Vj_reg_out when comparator_j = '0'
+	else Vj_in;
+	
 -- value k
 Vk_mux : mux32Bit
 port map(
@@ -132,8 +136,12 @@ port map(
 	WrEn => Vk_WrEn,
 	Din => Vk_in,
 	Reset => '0',
-	Dout => Vk_out);
+	Dout => Vk_reg_out);
 
+-- forward tou cdb
+Vk_out <= Vk_reg_out when comparator_k = '0'
+	else Vk_in;
+	
 -- q j
 Qj_mux : mux5Bit
 port map(
@@ -191,7 +199,13 @@ comparator_j <= '1' when CDB_valid = '1' and busy_reg_out = '1' and Qj = CDB_Q
 comparator_k <= '1' when CDB_valid = '1' and busy_reg_out = '1' and Qk = CDB_Q
 	else '0';
 	
-ready_for_exec <= '1' when busy_reg_out = '1' and Qj ="00000" and Qk = "00000"
+ready_for_exec <= '1' 
+	when busy_reg_out = '1' and (
+		(Qj ="00000" and Qk = "00000") or 
+		(Qj ="00000" and comparator_k = '1') or 
+		(comparator_j = '1' and Qk = "00000") or 
+		(comparator_j = '1' and comparator_k = '1')
+	)
 	else '0';
 end Behavioral;
 

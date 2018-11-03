@@ -1,0 +1,29 @@
+Command line:
+   RS_logical_test_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  49719
+
+Sat Nov 03 12:52:25 2018
+
+
+ Elaboration Time: 0.0624 sec
+
+ Current Memory Usage: 517.878 Meg
+
+ Total Signals          : 4090
+ Total Nets             : 1254
+ Total Signal Drivers   : 841
+ Total Blocks           : 868
+ Total Primitive Blocks : 652
+ Total Processes        : 830
+ Total Traceable Variables  : 11
+ Total Scalar Nets and Variables : 1617
+Total Line Count : 1054
+
+ Total Simulation Time: 0.093601 sec
+
+ Current Memory Usage: 517.878 Meg
+
+Sat Nov 03 13:36:34 2018
+
