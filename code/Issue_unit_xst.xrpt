@@ -5,14 +5,14 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Fri Oct 26 15:02:48 2018">
+  <application stringID="Xst" timeStamp="Thu Nov 08 17:59:55 2018">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
           <item stringID="variable" value="Path"/>
-          <item stringID="value" value="E:\Xilinx\ISE_DS\ISE\\lib\nt64;E:\Xilinx\ISE_DS\ISE\\bin\nt64;E:\Xilinx\ISE_DS\PlanAhead\bin;E:\Xilinx\ISE_DS\ISE\bin\nt64;E:\Xilinx\ISE_DS\ISE\lib\nt64;E:\Xilinx\ISE_DS\EDK\bin\nt64;E:\Xilinx\ISE_DS\EDK\lib\nt64;E:\Xilinx\ISE_DS\EDK\gnu\microblaze\nt64\bin;E:\Xilinx\ISE_DS\EDK\gnu\powerpc-eabi\nt64\bin;E:\Xilinx\ISE_DS\EDK\gnuwin\bin;E:\Xilinx\ISE_DS\common\bin\nt64;E:\Xilinx\ISE_DS\common\lib\nt64;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\AMD\ATI.ACE\Core-Static;C:\Users\Tower\AppData\Local\GitHubDesktop\bin"/>
+          <item stringID="value" value="E:\Xilinx\ISE_DS\ISE\\lib\nt64;E:\Xilinx\ISE_DS\ISE\\bin\nt64;E:\Xilinx\ISE_DS\PlanAhead\bin;E:\Xilinx\ISE_DS\ISE\bin\nt64;E:\Xilinx\ISE_DS\ISE\lib\nt64;E:\Xilinx\ISE_DS\EDK\bin\nt64;E:\Xilinx\ISE_DS\EDK\lib\nt64;E:\Xilinx\ISE_DS\EDK\gnu\microblaze\nt64\bin;E:\Xilinx\ISE_DS\EDK\gnu\powerpc-eabi\nt64\bin;E:\Xilinx\ISE_DS\EDK\gnuwin\bin;E:\Xilinx\ISE_DS\common\bin\nt64;E:\Xilinx\ISE_DS\common\lib\nt64;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\AMD\ATI.ACE\Core-Static;C:\Program Files\Git\cmd;C:\Users\Tower\AppData\Local\GitHubDesktop\bin"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="PATHEXT"/>
@@ -125,27 +125,25 @@
         <item stringID="XST_KEEP_HIERARCHY" value="No"/>
       </section>
       <section stringID="XST_DESIGN_STATISTICS">
-        <item stringID="XST_IOS" value="45"/>
+        <item stringID="XST_IOS" value="65"/>
       </section>
       <section stringID="XST_CELL_USAGE">
-        <item dataType="int" stringID="XST_BELS" value="6">
-          <item dataType="int" stringID="XST_LUT2" value="1"/>
-          <item dataType="int" stringID="XST_LUT3" value="1"/>
-          <item dataType="int" stringID="XST_LUT4" value="3"/>
-          <item dataType="int" stringID="XST_MUXF5" value="1"/>
+        <item dataType="int" stringID="XST_BELS" value="14">
+          <item dataType="int" stringID="XST_LUT3" value="7"/>
+          <item dataType="int" stringID="XST_LUT4" value="7"/>
         </item>
-        <item dataType="int" stringID="XST_IO_BUFFERS" value="45">
-          <item dataType="int" stringID="XST_IBUF" value="23"/>
-          <item dataType="int" stringID="XST_OBUF" value="22"/>
+        <item dataType="int" stringID="XST_IO_BUFFERS" value="65">
+          <item dataType="int" stringID="XST_IBUF" value="38"/>
+          <item dataType="int" stringID="XST_OBUF" value="27"/>
         </item>
       </section>
     </section>
     <section stringID="XST_DEVICE_UTILIZATION_SUMMARY">
       <item stringID="XST_SELECTED_DEVICE" value="3s1600efg320-5"/>
-      <item AVAILABLE="14752" dataType="int" label="Number of Slices" stringID="XST_NUMBER_OF_SLICES" value="3"/>
-      <item AVAILABLE="29504" dataType="int" label="Number of 4 input LUTs" stringID="XST_NUMBER_OF_4_INPUT_LUTS" value="5"/>
-      <item dataType="int" label="Number of IOs" stringID="XST_NUMBER_OF_IOS" value="45"/>
-      <item AVAILABLE="250" dataType="int" label="Number of bonded IOBs" stringID="XST_NUMBER_OF_BONDED_IOBS" value="45"/>
+      <item AVAILABLE="14752" dataType="int" label="Number of Slices" stringID="XST_NUMBER_OF_SLICES" value="8"/>
+      <item AVAILABLE="29504" dataType="int" label="Number of 4 input LUTs" stringID="XST_NUMBER_OF_4_INPUT_LUTS" value="14"/>
+      <item dataType="int" label="Number of IOs" stringID="XST_NUMBER_OF_IOS" value="65"/>
+      <item AVAILABLE="250" dataType="int" label="Number of bonded IOBs" stringID="XST_NUMBER_OF_BONDED_IOBS" value="65"/>
     </section>
     <section stringID="XST_PARTITION_RESOURCE_SUMMARY">
       <section stringID="XST_NO_PARTITIONS_WERE_FOUND_IN_THIS_DESIGN"/>

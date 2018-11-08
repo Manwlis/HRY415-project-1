@@ -33,7 +33,7 @@ begin
 	Rj <= IF_Rj;
 	Rk <= IF_Rk;
 	
-	process(issue, available, FU_type)
+	process(issue, available, FU_type, tag1, tag2, tag3)
 	begin
 		-- epilogh katallhlou RS kai elenxos domikwn kindinwn
 		if issue = '1' then

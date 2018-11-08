@@ -3,14 +3,14 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: Issue_unit.prj
 
@@ -104,20 +104,20 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/arxitektonikh1/Issue_unit.vhd" in Library work.
-Entity <Issue_unit> compiled.
-Entity <Issue_unit> (Architecture <Structural>) compiled.
+Compiling vhdl file "C:/arxitektonikh1/HRY415-project-1/code/Issue_unit.vhd" in Library work.
+Entity <issue_unit> compiled.
+Entity <issue_unit> (Architecture <behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
 =========================================================================
-Analyzing hierarchy for entity <Issue_unit> in library <work> (architecture <Structural>).
+Analyzing hierarchy for entity <Issue_unit> in library <work> (architecture <behavioral>).
 
 
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
-Analyzing Entity <Issue_unit> in library <work> (Architecture <Structural>).
+Analyzing Entity <Issue_unit> in library <work> (Architecture <behavioral>).
 Entity <Issue_unit> analyzed. Unit <Issue_unit> generated.
 
 
@@ -128,7 +128,7 @@ Entity <Issue_unit> analyzed. Unit <Issue_unit> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <Issue_unit>.
-    Related source file is "C:/arxitektonikh1/Issue_unit.vhd".
+    Related source file is "C:/arxitektonikh1/HRY415-project-1/code/Issue_unit.vhd".
 Unit <Issue_unit> synthesized.
 
 
@@ -189,17 +189,15 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 45
+# IOs                              : 65
 
 Cell Usage :
-# BELS                             : 6
-#      LUT2                        : 1
-#      LUT3                        : 1
-#      LUT4                        : 3
-#      MUXF5                       : 1
-# IO Buffers                       : 45
-#      IBUF                        : 23
-#      OBUF                        : 22
+# BELS                             : 14
+#      LUT3                        : 7
+#      LUT4                        : 7
+# IO Buffers                       : 65
+#      IBUF                        : 38
+#      OBUF                        : 27
 =========================================================================
 
 Device utilization summary:
@@ -207,10 +205,10 @@ Device utilization summary:
 
 Selected Device : 3s1600efg320-5 
 
- Number of Slices:                        3  out of  14752     0%  
- Number of 4 input LUTs:                  5  out of  29504     0%  
- Number of IOs:                          45
- Number of bonded IOBs:                  45  out of    250    18%  
+ Number of Slices:                        8  out of  14752     0%  
+ Number of 4 input LUTs:                 14  out of  29504     0%  
+ Number of IOs:                          65
+ Number of bonded IOBs:                  65  out of    250    26%  
 
 ---------------------------
 Partition Resource Summary:
@@ -243,7 +241,7 @@ Speed Grade: -5
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 6.235ns
+   Maximum combinational path delay: 8.334ns
 
 Timing Detail:
 --------------
@@ -251,33 +249,34 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 42 / 22
+  Total number of paths / destination ports: 120 / 27
 -------------------------------------------------------------------------
-Delay:               6.235ns (Levels of Logic = 4)
-  Source:            issue (PAD)
-  Destination:       Instr_valid (PAD)
+Delay:               8.334ns (Levels of Logic = 5)
+  Source:            FU_type<1> (PAD)
+  Destination:       tagRF<4> (PAD)
 
-  Data Path: issue to Instr_valid
+  Data Path: FU_type<1> to tagRF<4>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             5   1.106   0.690  issue_IBUF (issue_IBUF)
-     LUT2:I0->O            1   0.612   0.000  accepted1 (accepted1)
-     MUXF5:I1->O           2   0.278   0.380  accepted_f5 (accepted_OBUF)
-     OBUF:I->O                 3.169          Instr_valid_OBUF (Instr_valid)
+     IBUF:I->O             3   1.106   0.603  FU_type_1_IBUF (FU_type_1_IBUF)
+     LUT3:I0->O            7   0.612   0.754  tagRF<0>31 (issueRS_0_OBUF)
+     LUT4:I0->O            1   0.612   0.509  tagRF<4>_SW0 (N3)
+     LUT3:I0->O            1   0.612   0.357  tagRF<4> (tagRF_4_OBUF)
+     OBUF:I->O                 3.169          tagRF_4_OBUF (tagRF<4>)
     ----------------------------------------
-    Total                      6.235ns (5.165ns logic, 1.070ns route)
-                                       (82.8% logic, 17.2% route)
+    Total                      8.334ns (6.111ns logic, 2.223ns route)
+                                       (73.3% logic, 26.7% route)
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 6.73 secs
+Total CPU time to Xst completion: 6.30 secs
  
 --> 
 
-Total memory usage is 252196 kilobytes
+Total memory usage is 252452 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)
