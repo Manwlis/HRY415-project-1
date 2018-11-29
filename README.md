@@ -2,7 +2,7 @@
 
 Simple Tomasulo based processor back-end using VHDL. 
 
-Created individual units: 
+Created and tested the following individual units: 
 
 Issue unit
 
