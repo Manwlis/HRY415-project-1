@@ -1,4 +1,4 @@
-# HRY415-project-1
+# Tomasulo-based-processor-back-end-v1
 
 Simple Tomasulo based processor back-end using VHDL. 
 
